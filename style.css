@@ -73,6 +73,26 @@ h2 {
         max-width: 300px;
     }
 }
+
+.project-images {
+    display: block;
+}
+.lbfoam-img1 {
+    width: 59%;
+}
+.lbfoam-img2 {
+    width: 40%;
+}
+@media (max-width: 992px) {
+    .lbfoam-img1 {
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .lbfoam-img2 {
+        width: 100%;
+    }
+}
 #dpic img {
     width: 300px;
     height: 300px;
@@ -137,7 +157,7 @@ hr {
     grid-column: span 1;
     font-size: 14px;
     text-align: right;
-    padding-right: 5px;
+    padding-right: 6px;
     color: #bbb;
 }
 .hassets {
@@ -253,3 +273,10 @@ hr {
 .tilb {
     border-right: 1px solid #ccc;
 }
+#footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(214, 214, 214);
+    text-align: right;        /* Footer height */
+  }
