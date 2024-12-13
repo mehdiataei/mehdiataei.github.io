@@ -1,0 +1,49 @@
+{
+    "news": [
+        {
+            "title": "Paper Accepted at AAAI 2025",
+            "date": "2024",
+            "content": "Our work on \"Deep Generative Model for Mechanical System Configuration Design\" has been accepted at AAAI 2025.",
+            "image": "public/news/aaai2025.png",
+            "links": [
+                {
+                    "text": "Paper Website",
+                    "url": "https://gearformer.github.io/"
+                }
+            ]
+        },
+        {
+            "title": "XLB Library Showcased at NVIDIA Booth in SC24",
+            "date": "November 2024",
+            "content": "Our open-source XLB library was showcased at the NVIDIA booth during SC (Super Computing) 2024. XLB is a differentiable massively parallel Lattice Boltzmann library in Python that leverages hardware acceleration through JAX and NVIDIA Warp backends.",
+            "image": "public/news/xlb-sc24.jpg",
+            "links": [
+                {
+                    "text": "GitHub Repository",
+                    "url": "https://github.com/Autodesk/XLB"
+                }
+            ]
+        },
+        {
+            "title": "Featured in York University Article on AI in Education",
+            "date": "November 21, 2024",
+            "content": "My course at York University was featured in an article about AI integration in education at the Lassonde School of Engineering.",
+            "links": [
+                {
+                    "text": "Read Article",
+                    "url": "https://www.yorku.ca/yfile/2024/11/21/embracing-ai-in-education-transforming-learning-at-lassonde/"
+                }
+            ]
+        },
+        {
+            "title": "New Course at York University",
+            "date": "2023",
+            "content": "Started teaching \"AI and Generative Design for Mechanical Systems\" at York University."
+        },
+        {
+            "title": "Started Teaching at University of Toronto",
+            "date": "2023",
+            "content": "Began teaching \"Introduction to Machine Learning with Python\" at the University of Toronto (graduate course)."
+        }
+    ]
+}

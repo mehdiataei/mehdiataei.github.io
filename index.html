@@ -1,3 +1,91 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> <html lang="en"> <head> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <title>Title Goes Here</title> </head> <body> <p> &#128063;&#65039;
+<!DOCTYPE html>
+<html lang="en">
 
- </p> </body> </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehdi Ataei - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-section">
+                <img src="public/profile_pic.jpeg" alt="Mehdi Ataei" class="profile-pic">
+                <div class="text-content">
+                    <h1>Mehdi Ataei</h1>
+                    <p class="title">Senior Research Scientist at Autodesk</p>
+                    <div class="social-links">
+                        <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank">
+                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                        </a>
+                        <a href="https://github.com/mehdiataei" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/ataei8" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <div class="email-container">
+                            <button class="copy-email-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span class="email-text">ataei8@gmail.com</span>
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                            <span class="copy-tooltip">Copied!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a researcher at Autodesk working on AI and computational physics. I completed my Ph.D. at the
+                University of Toronto and did my undergraduate studies in mechanical engineering at Sharif University of
+                Technology. My work focuses on generative AI systems for engineering applications. I also teach AI and
+                machine learning courses at the University of Toronto, York University, and Vector Institute.</p>
+        </section>
+
+        <section id="interests">
+            <h2>Current Research Interests</h2>
+            <div class="interests">
+                <div class="interest-item">
+                    <h3>Vision Language Models</h3>
+                    <p>Fine-tuning, physical reasoning, and post-training reinforcement learning using simulation.</p>
+                </div>
+                <div class="interest-item">
+                    <h3>Deep Generative Models</h3>
+                    <p>Developing generative AI models for design automation.</p>
+                </div>
+                <div class="interest-item">
+                    <h3>High-Performance Computing</h3>
+                    <p>Multi-GPU programming, distributed training, and scaling large simulations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2>Recent News</h2>
+            <div id="news-container">
+                <!-- News items will be loaded here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal-overlay">
+        <div class="modal-close">&times;</div>
+        <div class="modal-content">
+            <img class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
