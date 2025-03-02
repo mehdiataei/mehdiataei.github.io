@@ -4,10 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehdi Ataei - Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Mehdi Ataei - Senior Research Scientist | AI & Computational Physics</title>
+    <meta name="description" content="Personal website of Mehdi Ataei, Senior Research Scientist at Autodesk specializing in AI and computational physics">
+    <meta name="keywords" content="Mehdi Ataei, Research Scientist, AI, Machine Learning, Computational Physics, Autodesk">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="Mehdi Ataei - Senior Research Scientist">
+    <meta property="og:description" content="Personal website of Mehdi Ataei, Senior Research Scientist at Autodesk">
+    <meta property="og:image" content="public/profile_pic.jpeg">
+    <meta property="og:url" content="https://mehdiataei.github.io">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
@@ -19,20 +28,23 @@
                     <h1>Mehdi Ataei</h1>
                     <p class="title">Senior Research Scientist at Autodesk</p>
                     <div class="social-links">
-                        <a href="https://x.com/AtaeiMe" target="_blank">
-                            <i class="fa-brands fa-x-twitter"></i>
+                        <a href="https://x.com/AtaeiMe" target="_blank" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i> Twitter
                         </a>
-                        <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank">
+                        <a href="https://mehdiataei.bearblog.dev/blog/" target="_blank" aria-label="Blog">
+                            <i class="fas fa-blog"></i> Blog
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
                             <i class="fas fa-graduation-cap"></i> Google Scholar
                         </a>
-                        <a href="https://github.com/mehdiataei" target="_blank">
+                        <a href="https://github.com/mehdiataei" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="https://linkedin.com/in/ataei8" target="_blank">
+                        <a href="https://linkedin.com/in/ataei8" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                         <div class="email-container">
-                            <button class="copy-email-btn">
+                            <button class="copy-email-btn" aria-label="Copy email">
                                 <i class="fas fa-envelope"></i>
                                 <span class="email-text">ataei8@gmail.com</span>
                                 <i class="fas fa-copy copy-icon"></i>
@@ -48,14 +60,13 @@
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a researcher at Autodesk working on AI and computational physics. I completed my Ph.D. at the
-                University of Toronto and did my undergraduate studies in mechanical engineering at Sharif University of
-                Technology. My work focuses on generative AI systems for engineering applications. I also teach AI and
-                machine learning courses at the University of Toronto, York University, and Vector Institute.</p>
+            <div class="about-content">
+                <p><span class="highlight">Senior Research Scientist at Autodesk</span> working on AI and computational physics. Ph.D. from University of Toronto, focusing on <span class="highlight">generative AI systems for engineering applications</span>. I teach AI and ML courses at UofT, York University, and Vector Institute.</p>
+            </div>
         </section>
 
         <section id="interests">
-            <h2>Current Research Interests</h2>
+            <h2>Research Interests</h2>
             <div class="interests">
                 <div class="interest-item">
                     <h3>Vision Language Models</h3>
@@ -63,28 +74,47 @@
                 </div>
                 <div class="interest-item">
                     <h3>Deep Generative Models</h3>
-                    <p>Developing generative AI models for design automation.</p>
+                    <p>Developing generative AI models for design automation and engineering applications.</p>
                 </div>
                 <div class="interest-item">
                     <h3>High-Performance Computing</h3>
-                    <p>Multi-GPU programming, distributed training, and scaling large simulations.</p>
+                    <p>Multi-GPU programming, distributed training, and scaling large simulations for computational physics.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-description">
+                <p>I occasionally write about AI, machine learning, and my research interests on my blog. Follow along for insights and reflections on emerging technologies.</p>
+            </div>
+            <div class="blog-action">
+                <a href="https://mehdiataei.bearblog.dev/blog/" target="_blank" class="blog-link">
+                    <i class="fas fa-blog"></i> Read My Blog
+                </a>
+            </div>
+            <div id="blog-posts">
             </div>
         </section>
 
         <section id="news">
             <h2>Recent News</h2>
             <div id="news-container">
-                <!-- News items will be loaded here dynamically -->
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Mehdi Ataei. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Image Modal -->
     <div id="imageModal" class="modal-overlay">
-        <div class="modal-close">&times;</div>
         <div class="modal-content">
-            <img class="modal-image" src="" alt="">
+            <div class="modal-close">&times;</div>
+            <img class="modal-image" src="" alt="Modal image">
         </div>
     </div>
 
