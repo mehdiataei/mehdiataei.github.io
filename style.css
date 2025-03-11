@@ -539,6 +539,8 @@ section:hover {
     font-size: 0.9rem;
     cursor: pointer;
     transition: var(--transition);
+    width: 100%;
+    justify-content: center;
 }
 
 .copy-email-btn:hover {
@@ -776,6 +778,11 @@ section:hover {
     
     footer .container {
         padding: 0 1.5rem;
+    }
+    
+    .email-container {
+        display: flex;
+        justify-content: center;
     }
 }
 
