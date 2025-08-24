@@ -1,124 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehdi Ataei - Principal AI Research Scientist | AI & Computational Physics</title>
-    <meta name="description" content="Personal website of Mehdi Ataei, Principal AI Research Scientist at Autodesk specializing in AI and computational physics">
-    <meta name="keywords" content="Mehdi Ataei, Research Scientist, AI, Machine Learning, Computational Physics, Autodesk">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="Mehdi Ataei - Principal AI Research Scientist">
-    <meta property="og:description" content="Personal website of Mehdi Ataei, Principal AI Research Scientist at Autodesk">
-    <meta property="og:image" content="public/profile_pic.jpeg">
-    <meta property="og:url" content="https://mehdiataei.github.io">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Mehdi Ataei</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #555;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            margin: 20px 0;
+        }
+        .links a {
+            margin-right: 15px;
+        }
+        .links a.email-link {
+            margin-right: 2px;
+        }
+        .copy-link {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            font: inherit;
+            padding: 0;
+            margin-left: 2px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        .copy-link:hover {
+            text-decoration: underline;
+        }
+        .copy-link .icon {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+            transition: transform 0.15s ease, opacity 0.15s ease, color 0.15s ease;
+        }
+        .copy-link .icon-check {
+            display: none;
+        }
+        .copy-link.copied .icon-copy {
+            display: none;
+        }
+        .copy-link.copied .icon-check {
+            display: inline;
+        }
+        .copy-link.copied {
+            color: #28a745;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.85); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .copy-link.copied .icon-check {
+            animation: pop 150ms ease-out;
+        }
+        .email-btn {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            color: #333;
+            cursor: pointer;
+            font: inherit;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-right: 15px;
+        }
+        .email-btn:hover {
+            background: #e5e5e5;
+        }
+        .copied {
+            color: #28a745;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <div class="header-content">
-            <div class="profile-section">
-                <img src="public/profile_pic.jpeg" alt="Mehdi Ataei" class="profile-pic">
-                <div class="text-content">
-                    <h1>Mehdi Ataei</h1>
-                    <p class="title">Principal AI Research Scientist at Autodesk</p>
-                    <div class="social-links">
-                        <a href="https://x.com/AtaeiMe" target="_blank" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter"></i> Twitter
-                        </a>
-                        <a href="https://mehdiataei.bearblog.dev/blog/" target="_blank" aria-label="Blog">
-                            <i class="fas fa-blog"></i> Blog
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
-                            <i class="fas fa-graduation-cap"></i> Google Scholar
-                        </a>
-                        <a href="https://github.com/mehdiataei" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://linkedin.com/in/ataei8" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <div class="email-container">
-                            <button class="copy-email-btn" aria-label="Copy email">
-                                <i class="fas fa-envelope"></i>
-                                <span class="email-text">ataei8@gmail.com</span>
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                            <span class="copy-tooltip">Copied!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p><span class="highlight">Principal AI Research Scientist at Autodesk</span> working on AI and computational physics. Ph.D. from University of Toronto, focusing on <span class="highlight">generative AI systems for engineering applications</span>. I teach AI and ML courses at UofT, York University, and Vector Institute.</p>
-            </div>
-        </section>
-
-        <section id="interests">
-            <h2>Research Interests</h2>
-            <div class="interests">
-                <div class="interest-item">
-                    <h3>Vision Language Models</h3>
-                    <p>Fine-tuning, physical reasoning, and post-training reinforcement learning using simulation.</p>
-                </div>
-                <div class="interest-item">
-                    <h3>Deep Generative Models</h3>
-                    <p>Developing generative AI models for design automation and engineering applications.</p>
-                </div>
-                <div class="interest-item">
-                    <h3>High-Performance Computing</h3>
-                    <p>Multi-GPU programming, distributed training, and scaling large simulations for computational physics.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog">
-            <h2>Blog</h2>
-            <div class="blog-description">
-                <p>I occasionally write about AI, machine learning, and my research interests on my blog. Follow along for insights and reflections on emerging technologies.</p>
-            </div>
-            <div class="blog-action">
-                <a href="https://mehdiataei.bearblog.dev/blog/" target="_blank" class="blog-link">
-                    <i class="fas fa-blog"></i> Read My Blog
-                </a>
-            </div>
-            <div id="blog-posts">
-            </div>
-        </section>
-
-        <section id="news">
-            <h2>Recent News</h2>
-            <div id="news-container">
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Mehdi Ataei. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-close">&times;</div>
-            <img class="modal-image" src="" alt="Modal image">
-        </div>
+    <h1>Mehdi Ataei</h1>
+    <p>Principal AI Research Scientist at Autodesk</p>
+    
+    <div class="links">
+        <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://x.com/AtaeiMe" target="_blank">X</a>
+        <a href="https://github.com/mehdiataei" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/ataei8" target="_blank">LinkedIn</a>
+        <a href="https://mehdiataei.bearblog.dev/blog/" target="_blank">Blog</a>
+        <a href="mailto:ataei8@gmail.com" class="email-link">ataei8@gmail.com</a>
+        <button id="copy-email-btn" class="copy-link" type="button" onclick="copyEmail()" title="Copy email address" aria-label="Copy email address">
+            <svg class="icon icon-copy" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <svg class="icon icon-check" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </div>
 
-    <script src="script.js" defer></script>
-</body>
+    <h2>About</h2>
+    <p>I'm a Principal AI Research Scientist at <a href="https://www.research.autodesk.com/" target="_blank">Autodesk Research</a>. I build simulation‑based synthetic data pipelines and apply them to develop models that reason about physics and engineering design. My focus is on the development of systems for multimodal reasoning, 3D shape generation, and assembly design. I earned a Ph.D. in Computational Physics from the University of Toronto and a B.Sc. in Mechanical Engineering from Sharif University of Technology. I teach AI and machine learning at the University of Toronto and York University.</p>
 
+    <h2>Research Interests</h2>
+    <ul>
+        <li><strong>Synthetic Data for Multimodal/Physical Reasoning</strong> - Scalable simulation and dataset generation for VLMs and agents</li>
+        <li><strong>Generative Design for Mechanical Assemblies</strong> - Models and workflows for automated design exploration</li>
+        <li><strong>Differentiable Physics & HPC</strong> - Training and large-scale simulation with JAX/Warp; creator of <a href="https://github.com/Autodesk/XLB" target="_blank">XLB</a></li>
+    </ul>
+
+
+    <script>
+        function copyEmail() {
+            const email = 'ataei8@gmail.com';
+            const btn = document.getElementById('copy-email-btn');
+            const showFeedback = () => {
+                btn.classList.add('copied');
+                btn.setAttribute('aria-label', 'Email copied');
+                btn.title = 'Copied';
+                btn.disabled = true;
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.setAttribute('aria-label', 'Copy email address');
+                    btn.title = 'Copy email address';
+                    btn.disabled = false;
+                }, 1600);
+            };
+            const fallbackCopy = (text) => {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.top = '0';
+                ta.style.left = '0';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                try { document.execCommand('copy'); } catch (e) {}
+                document.body.removeChild(ta);
+            };
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email).then(showFeedback, function() {
+                    fallbackCopy(email);
+                    showFeedback();
+                });
+            } else {
+                fallbackCopy(email);
+                showFeedback();
+            }
+        }
+    </script>
+</body>
 </html>
