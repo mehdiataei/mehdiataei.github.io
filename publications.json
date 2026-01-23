@@ -1,0 +1,191 @@
+{
+  "openSource": [
+    {
+      "name": "XLB",
+      "role": "original creator and maintainer",
+      "stars": 432,
+      "link": "https://github.com/Autodesk/XLB",
+      "description": "Differentiable multi-GPU simulations in JAX and NVIDIA's Warp for physics-based machine learning"
+    },
+    {
+      "name": "DesignQA",
+      "link": "https://design-qa.github.io/",
+      "description": "A multimodal benchmark for evaluating LLMs' understanding of engineering documentation"
+    },
+    {
+      "name": "LBfoam",
+      "role": "original creator and maintainer",
+      "link": "https://github.com/mehdiataei/LBfoam",
+      "description": "Scalable simulation of foaming using the Lattice Boltzmann Method based on C++ and MPI"
+    }
+  ],
+  "patents": [
+    {
+      "title": "Techniques for enabling conversational user interfaces for simulation applications via language models",
+      "inventors": ["M. Ataei", "H. Salehipour", "A. Tessier"],
+      "number": "US Patent App. 18/750,783"
+    },
+    {
+      "title": "Machine learning approach to piecewise linear interface construction",
+      "inventors": [ "M. Ataei", "M. Bussmann"],
+      "number": "US Patent 11,250,186"
+    },
+    {
+      "title": "Memory-efficient encoding and decoding of boundary conditions in the lattice Boltzmann method",
+      "inventors": ["M. Ataei", "M. Meneghin", "H. Salehipour"],
+      "number": "US Patent App. 19/040,731"
+    },
+    {
+      "title": "Large language model agent-based framework for design requirements elicitation",
+      "inventors": ["M. Ataei", "H. Cheong", "D. Grandi", "Y. Wang", "N.J.W. Morris", "A. Tessier"],
+      "number": "US Patent App. 19/075,309"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Physics Context Builders: A Modular Framework for Physical Reasoning in Vision-Language Models",
+      "venue": "International Conference on Computer Vision (ICCV)",
+      "year": 2025,
+      "authors": ["V. Balazadeh", "M. Ataei", "H. Cheong", "A. Khasahmadi"],
+      "role": "project lead, intern manager",
+      "link": "https://arxiv.org/abs/2412.08619",
+      "type": "conference"
+    },
+    {
+      "title": "MechaFormer: Sequence Learning for Kinematic Mechanism Design Automation",
+      "venue": "AAAI Conference",
+      "year": 2026,
+      "authors": ["D. Bolanos", "M. Ataei", "P. Jayaraman"],
+      "role": "project lead, intern manager",
+      "link": "https://arxiv.org/abs/2508.09005",
+      "type": "conference"
+    },
+    {
+      "title": "Deep Generative Model for Mechanical System Configuration Design",
+      "venue": "AAAI Conference",
+      "year": 2025,
+      "authors": ["Y. Etesam", "H. Cheong", "M. Ataei", "P. Jayaraman"],
+      "link": "https://gearformer.github.io/",
+      "type": "conference"
+    },
+    {
+      "title": "Sampling Strategies for Transformer-Based Mechanism Synthesis",
+      "venue": "NeurIPS, Frontiers in Probabilistic Inference",
+      "year": 2025,
+      "authors": ["M. Ataei", "D. Bolanos", "P. Jayaraman"],
+      "type": "workshop"
+    },
+    {
+      "title": "e-SimFT: Pareto-Optimal Sampling of Generative Design Models Fine-tuned with Simulation Feedback",
+      "venue": "NeurIPS, Frontiers in Probabilistic Inference",
+      "year": 2025,
+      "authors": ["H. Cheong", "M. Ataei", "A. Khasahmadi", "P. Jayaraman"],
+      "link": "https://arxiv.org/abs/2502.02628",
+      "type": "workshop"
+    },
+    {
+      "title": "mPOLICE: Provable Enforcement of Multi-Region Affine Constraints in Deep Neural Networks",
+      "venue": "Under review",
+      "year": 2025,
+      "authors": ["M. Ataei", "H. Cheong", "A. Butscher"],
+      "link": "https://arxiv.org/abs/2502.02434",
+      "type": "preprint"
+    },
+    {
+      "title": "Transformer-Based Interfaces for Mechanical Assembly Design: A Gear Train Case Study",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "authors": ["M. Ataei", "H. Cheong", "J. Jun", "J. Matejka", "A. Tessier", "G. Fitzmaurice"],
+      "link": "https://arxiv.org/abs/2504.08633",
+      "type": "preprint"
+    },
+    {
+      "title": "DesignQA: A Multimodal Benchmark for Evaluating Large Language Models' Understanding of Engineering Documentation",
+      "venue": "ASME Journal of Computing and Information Science in Engineering",
+      "year": 2025,
+      "authors": ["A. C. Doris", "D. Grandi", "R. Tomich", "M. F. Alam", "H. Cheong", "M. Ataei", "F. Ahmed"],
+      "link": "https://design-qa.github.io/",
+      "type": "journal"
+    },
+    {
+      "title": "Elicitron: An LLM Agent-Based Simulation Framework for Design Requirements",
+      "venue": "ASME Journal of Computing and Information Science in Engineering",
+      "year": 2025,
+      "authors": ["M. Ataei", "H. Cheong", "D. Grandi", "Y. Wang", "N. Morris", "A. Tessier"],
+      "link": "https://arxiv.org/abs/2404.16045",
+      "type": "journal"
+    },
+    {
+      "title": "RECALL-MM: A Multimodal Dataset of Consumer Product Recalls for Risk Analysis using Computational Methods and Large Language Models",
+      "venue": "IDETC/CIE",
+      "year": 2025,
+      "authors": ["D. Bolanos", "M. Ataei", "D. Grandi", "K. Goucher-Lambert"],
+      "link": "https://arxiv.org/abs/2503.23213",
+      "type": "conference"
+    },
+    {
+      "title": "Accelerating Scientific Research Through a Multi-LLM Framework",
+      "venue": "Under review",
+      "year": 2025,
+      "authors": ["J. Ramirez-Medina", "M. Ataei", "A. Amirfazli"],
+      "link": "https://arxiv.org/abs/2502.07960",
+      "type": "preprint"
+    },
+    {
+      "title": "Reduced-Order Modeling of Unsteady Fluid Flow Using Neural Network Ensembles",
+      "venue": "Physics of Fluids",
+      "year": 2024,
+      "authors": ["R. Halder", "M. Ataei", "H. Salehipour", "K. Fidkowski"],
+      "link": "https://arxiv.org/abs/2402.05372",
+      "type": "journal"
+    },
+    {
+      "title": "XLB: A Differentiable Massively Parallel Lattice Boltzmann Library in Python",
+      "venue": "Computer Physics Communications",
+      "year": 2024,
+      "authors": ["M. Ataei", "H. Salehipour"],
+      "link": "https://doi.org/10.1016/j.cpc.2024.109187",
+      "type": "journal"
+    },
+    {
+      "title": "A Scalable Differentiable Physics Solver Based on the Lattice Boltzmann Method",
+      "venue": "NVIDIA GPU Technology Conference (GTC)",
+      "year": 2023,
+      "authors": ["M. Ataei"],
+      "link": "https://www.nvidia.com/en-us/on-demand/session/gtcspring23-s51956/",
+      "type": "conference"
+    },
+    {
+      "title": "Data Shift in Machine Learning and Potential Remedies",
+      "venue": "ECML-PKDD (Tutorial)",
+      "year": 2021,
+      "authors": ["A. Pesaranghader", "M. Ataei", "S. Kocak"],
+      "link": "https://ecmlpkdd.org/2021/",
+      "type": "tutorial"
+    },
+    {
+      "title": "NPLIC: A Machine Learning Approach to Piecewise Linear Interface Construction",
+      "venue": "Computers & Fluids",
+      "year": 2021,
+      "authors": ["M. Ataei", "M. Bussmann", "V. Shaayegan", "F. Costa", "S. Han", "C.B. Park"],
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S0045793021001171",
+      "type": "journal"
+    },
+    {
+      "title": "A Deep Learning Algorithm for Piecewise Linear Interface Construction Problem",
+      "venue": "AAAI-MLPS",
+      "year": 2021,
+      "authors": ["M. Ataei", "M. Bussmann", "E. Pirmorad", "F. Costa", "S. Han", "C.B. Park"],
+      "link": "https://arxiv.org/abs/2107.13067",
+      "type": "workshop"
+    },
+    {
+      "title": "LBfoam: An Open-Source Software Package for the Simulation of Foaming Using the Lattice Boltzmann Method",
+      "venue": "Computer Physics Communications",
+      "year": 2020,
+      "authors": ["M. Ataei", "V. Shaayegan", "F. Costa", "S. Han", "C.B. Park", "M. Bussmann"],
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S001046552030343X",
+      "type": "journal"
+    }
+  ]
+}

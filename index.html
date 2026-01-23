@@ -5,170 +5,533 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehdi Ataei</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
+            background: #fff;
+        }
+        header {
+            margin-bottom: 40px;
         }
         h1 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
         }
-        h2 {
-            margin-top: 30px;
-            color: #555;
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .title .role {
+            font-weight: 500;
+        }
+        .title .sep {
+            width: 4px;
+            height: 4px;
+            background: #999;
+            border-radius: 50%;
+        }
+        .title .org {
+            color: #666;
+            font-weight: 400;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .links a, .links .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            height: 34px;
+            padding: 0 12px;
+            background: #f7f7f7;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            color: #333;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .links a:hover, .links .copy-btn:hover {
+            background: #eee;
+            border-color: #ddd;
+            text-decoration: none;
+        }
+        .links a.icon-only {
+            padding: 0 10px;
+        }
+        .links svg {
+            width: 16px;
+            height: 16px;
+            opacity: 0.7;
         }
         a {
-            color: #0066cc;
+            color: #0055b3;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        .links {
-            margin: 20px 0;
-        }
-        .links a {
-            margin-right: 15px;
-        }
-        .links a.email-link {
-            margin-right: 2px;
-        }
-        .copy-link {
-            background: none;
-            border: none;
-            color: #0066cc;
+        .copy-btn {
             cursor: pointer;
             font: inherit;
-            padding: 0;
-            margin-left: 2px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
         }
-        .copy-link:hover {
-            text-decoration: underline;
-        }
-        .copy-link .icon {
-            width: 16px;
-            height: 16px;
-            vertical-align: text-bottom;
-            transition: transform 0.15s ease, opacity 0.15s ease, color 0.15s ease;
-        }
-        .copy-link .icon-check {
+        .copy-btn .check {
+            width: 14px;
+            height: 14px;
             display: none;
         }
-        .copy-link.copied .icon-copy {
+        .copy-btn .copied-text {
             display: none;
         }
-        .copy-link.copied .icon-check {
+        .copy-btn.copied {
+            color: #1a7f37;
+            border-color: #1a7f37;
+            background: #f0fff4;
+        }
+        .copy-btn.copied .email-text {
+            display: none;
+        }
+        .copy-btn.copied .copied-text {
+            display: inline;
+            font-weight: 500;
+        }
+        .copy-btn.copied .check {
             display: inline;
         }
-        .copy-link.copied {
-            color: #28a745;
+        section {
+            margin-bottom: 40px;
         }
-        @keyframes pop {
-            0% { transform: scale(0.85); opacity: 0.4; }
-            100% { transform: scale(1); opacity: 1; }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e5e5;
         }
-        .copy-link.copied .icon-check {
-            animation: pop 150ms ease-out;
+        p {
+            margin: 0 0 16px 0;
         }
-        .email-btn {
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .filter-btn {
             background: #f5f5f5;
             border: 1px solid #ddd;
-            color: #333;
+            padding: 6px 12px;
+            font-size: 0.85rem;
             cursor: pointer;
-            font: inherit;
-            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        .filter-btn:hover {
+            background: #eee;
+        }
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #1a1a1a;
+        }
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+        .pub-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+        .pub-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .pub-title a {
+            color: inherit;
+        }
+        .pub-title a:hover {
+            color: #0055b3;
+        }
+        .pub-venue {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .pub-authors {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .pub-authors .me {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .pub-role {
+            background: #e8f4fd;
+            color: #0055b3;
+            font-size: 0.75rem;
+            padding: 2px 6px;
             border-radius: 3px;
-            margin-right: 15px;
+            margin-left: 4px;
         }
-        .email-btn:hover {
-            background: #e5e5e5;
+        .pub-type {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-right: 8px;
+            background: #f0f0f0;
+            color: #555;
         }
-        .copied {
-            color: #28a745;
-            font-size: 0.9em;
-            margin-left: 5px;
+        .pub-type.conference { background: #e3f2fd; color: #1565c0; }
+        .pub-type.journal { background: #e8f5e9; color: #2e7d32; }
+        .pub-type.workshop { background: #fff3e0; color: #e65100; }
+        .pub-type.preprint { background: #f3e5f5; color: #7b1fa2; }
+        .pub-type.tutorial { background: #fce4ec; color: #c2185b; }
+        .year-group {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 0 0;
+        }
+        .year-group:first-child {
+            margin-top: 0;
+        }
+        .oss-list {
+            list-style: none;
+            padding: 0;
+        }
+        .oss-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .oss-item:last-child {
+            border-bottom: none;
+        }
+        .oss-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+        .oss-name {
+            font-weight: 600;
+        }
+        .oss-name a {
+            color: inherit;
+        }
+        .oss-name a:hover {
+            color: #0055b3;
+        }
+        .oss-role {
+            font-size: 0.8rem;
+            color: #555;
+        }
+        .oss-stars {
+            font-size: 0.8rem;
+            color: #656d76;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .oss-stars svg {
+            width: 14px;
+            height: 14px;
+            fill: #eac54f;
+        }
+        .oss-desc {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .oss-contrib {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px dashed #ddd;
+        }
+        .patent-list {
+            list-style: none;
+            padding: 0;
+        }
+        .patent-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .patent-item:last-child {
+            border-bottom: none;
+        }
+        .patent-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .patent-number {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 2px;
+        }
+        .patent-inventors {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .patent-inventors .me {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .section-note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        #publications {
+            transition: opacity 0.15s ease;
+        }
+        #publications.fade {
+            opacity: 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 16px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .links {
+                gap: 6px 12px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Mehdi Ataei</h1>
-    <p>Principal AI Research Scientist at Autodesk</p>
-    
-    <div class="links">
-        <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a href="https://x.com/AtaeiMe" target="_blank">X</a>
-        <a href="https://github.com/mehdiataei" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/ataei8" target="_blank">LinkedIn</a>
-        <!-- <a href="https://mehdiataei.bearblog.dev/blog/" target="_blank">Blog</a> -->
-        <a href="mailto:ataei8@gmail.com" class="email-link">ataei8@gmail.com</a>
-        <button id="copy-email-btn" class="copy-link" type="button" onclick="copyEmail()" title="Copy email address" aria-label="Copy email address">
-            <svg class="icon icon-copy" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" fill="none" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <svg class="icon icon-check" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-    </div>
+    <header>
+        <h1>Mehdi Ataei</h1>
+        <div class="title"><span class="role">Principal AI Research Scientist</span><span class="sep"></span><span class="org">Autodesk AI Lab</span></div>
+        <nav class="links">
+            <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14a7 7 0 0 0 0-14z"/></svg>
+                Scholar
+            </a>
+            <a href="https://github.com/mehdiataei" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/ataei8" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065a2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+            <a href="https://x.com/AtaeiMe" target="_blank" class="icon-only">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <button type="button" class="copy-btn" id="copy-btn" title="Copy email">
+                <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6l9-6"/></svg>
+                <span class="email-text">ataei8@gmail.com</span>
+                <span class="copied-text">Copied!</span>
+                <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 6L9 17l-5-5"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
 
-    <h2>About</h2>
-    <p>I'm a Principal AI Research Scientist at <a href="https://www.research.autodesk.com/" target="_blank">Autodesk Research</a>. I build simulation‑based synthetic data pipelines and apply them to develop models that reason about physics and engineering design. My focus is on the development of systems for multimodal reasoning, 3D shape generation, and assembly design. I earned a Ph.D. in Computational Physics from the University of Toronto and a B.Sc. in Mechanical Engineering from Sharif University of Technology. I teach AI and machine learning at the University of Toronto and York University.</p>
+    <section>
+        <h2>About</h2>
+        <p>I am a member of the Foundation Models team at <a href="https://www.research.autodesk.com/research-areas/science/ai-lab/" target="_blank">Autodesk AI Lab</a>, where I develop generative models for design and engineering. My research focuses on synthetic data as an enabler for generative AI, investigating how simulation and procedural generation can produce the structured, domain-rich datasets these models require.</p>
+        <p>My background spans physics-informed machine learning and high-performance computing. I completed my Ph.D. in Computational Physics at the University of Toronto, where I was a Postgraduate Affiliate at the <a href="https://vectorinstitute.ai/" target="_blank">Vector Institute</a>. I hold a B.Sc. in Mechanical Engineering from Sharif University of Technology. I am an instructor in AI and machine learning at the University of Toronto and York University.</p>
+    </section>
 
-    <h2>Research Interests</h2>
-    <ul>
-        <li><strong>Synthetic Data for Multimodal/Physical Reasoning</strong> - Scalable simulation and dataset generation for VLMs and agents</li>
-        <li><strong>Generative Design for Mechanical Assemblies</strong> - Models and workflows for automated design exploration</li>
-        <li><strong>Differentiable Physics & HPC</strong> - Training and large-scale simulation with JAX/Warp; creator of <a href="https://github.com/Autodesk/XLB" target="_blank">XLB</a></li>
-    </ul>
+    <section>
+        <h2>Patents</h2>
+        <p class="section-note">Non-provisional</p>
+        <ul class="patent-list" id="patents"></ul>
+    </section>
 
+    <section>
+        <h2>Selected Publications</h2>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="conference">Conference</button>
+            <button class="filter-btn" data-filter="journal">Journal</button>
+            <button class="filter-btn" data-filter="workshop">Workshop</button>
+            <button class="filter-btn" data-filter="preprint">Preprint</button>
+        </div>
+        <div id="publications"></div>
+    </section>
+
+    <section>
+        <h2>Open Source</h2>
+        <ul class="oss-list" id="opensource"></ul>
+        <p class="oss-contrib">Also contributed minor features and bug fixes to <a href="https://github.com/NVIDIA/warp" target="_blank">NVIDIA Warp</a>.</p>
+    </section>
 
     <script>
-        function copyEmail() {
+        document.getElementById('copy-btn').addEventListener('click', function() {
+            const btn = this;
             const email = 'ataei8@gmail.com';
-            const btn = document.getElementById('copy-email-btn');
-            const showFeedback = () => {
-                btn.classList.add('copied');
-                btn.setAttribute('aria-label', 'Email copied');
-                btn.title = 'Copied';
-                btn.disabled = true;
-                setTimeout(() => {
-                    btn.classList.remove('copied');
-                    btn.setAttribute('aria-label', 'Copy email address');
-                    btn.title = 'Copy email address';
-                    btn.disabled = false;
-                }, 1600);
-            };
-            const fallbackCopy = (text) => {
-                const ta = document.createElement('textarea');
-                ta.value = text;
-                ta.style.position = 'fixed';
-                ta.style.top = '0';
-                ta.style.left = '0';
-                ta.style.opacity = '0';
-                document.body.appendChild(ta);
-                ta.focus();
-                ta.select();
-                try { document.execCommand('copy'); } catch (e) {}
-                document.body.removeChild(ta);
-            };
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(email).then(showFeedback, function() {
-                    fallbackCopy(email);
-                    showFeedback();
+
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(function() {
+                    btn.classList.add('copied');
+                    setTimeout(function() { btn.classList.remove('copied'); }, 1500);
                 });
             } else {
-                fallbackCopy(email);
-                showFeedback();
+                const ta = document.createElement('textarea');
+                ta.value = email;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                btn.classList.add('copied');
+                setTimeout(function() { btn.classList.remove('copied'); }, 1500);
             }
+        });
+
+        async function loadData() {
+            const res = await fetch('publications.json');
+            const data = await res.json();
+            window.publications = data.publications;
+            renderPatents(data.patents);
+            renderOpenSource(data.openSource);
+            renderPublications('all');
         }
+
+        function renderPatents(patents) {
+            const container = document.getElementById('patents');
+            let html = '';
+            patents.forEach(p => {
+                const inventors = p.inventors.map(a => {
+                    if (a.includes('M. Ataei')) {
+                        return `<span class="me">${a}</span>`;
+                    }
+                    return a;
+                }).join(', ');
+                html += `
+                    <li class="patent-item">
+                        <div class="patent-title">${p.title}</div>
+                        <div class="patent-number">${p.number}</div>
+                        <div class="patent-inventors">${inventors}</div>
+                    </li>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function renderOpenSource(projects) {
+            const container = document.getElementById('opensource');
+            let html = '';
+            projects.forEach(p => {
+                const starsHtml = p.stars ? `<span class="oss-stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>${p.stars}</span>` : '';
+                const roleHtml = p.role ? `<span class="oss-role">(${p.role})</span>` : '';
+                html += `
+                    <li class="oss-item">
+                        <div class="oss-header">
+                            <span class="oss-name"><a href="${p.link}" target="_blank">${p.name}</a></span>
+                            ${roleHtml}
+                            ${starsHtml}
+                        </div>
+                        <div class="oss-desc">${p.description}</div>
+                    </li>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function renderPublications(filter) {
+            const container = document.getElementById('publications');
+            let pubs = window.publications;
+
+            if (filter !== 'all') {
+                pubs = pubs.filter(p => p.type === filter);
+            }
+
+            const grouped = {};
+            pubs.forEach(p => {
+                if (!grouped[p.year]) grouped[p.year] = [];
+                grouped[p.year].push(p);
+            });
+
+            const years = Object.keys(grouped).sort((a, b) => b - a);
+
+            let html = '';
+            years.forEach(year => {
+                html += `<div class="year-group">${year}</div>`;
+                html += '<ul class="pub-list">';
+                grouped[year].forEach(pub => {
+                    const authors = pub.authors.map(a => {
+                        if (a.includes('M. Ataei')) {
+                            let authorHtml = `<span class="me">${a}</span>`;
+                            if (pub.role) {
+                                authorHtml += `<span class="pub-role">${pub.role}</span>`;
+                            }
+                            return authorHtml;
+                        }
+                        return a;
+                    }).join(', ');
+
+                    const titleHtml = pub.link
+                        ? `<a href="${pub.link}" target="_blank">${pub.title}</a>`
+                        : pub.title;
+
+                    html += `
+                        <li class="pub-item">
+                            <div class="pub-title">${titleHtml}</div>
+                            <div class="pub-venue">
+                                <span class="pub-type ${pub.type}">${pub.type}</span>
+                                ${pub.venue}
+                            </div>
+                            <div class="pub-authors">${authors}</div>
+                        </li>
+                    `;
+                });
+                html += '</ul>';
+            });
+
+            container.innerHTML = html;
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const container = document.getElementById('publications');
+                container.classList.add('fade');
+                setTimeout(() => {
+                    renderPublications(btn.dataset.filter);
+                    container.classList.remove('fade');
+                }, 150);
+            });
+        });
+
+        loadData();
     </script>
 </body>
 </html>
