@@ -1,9 +1,76 @@
 {
+  "experience": [
+    {
+      "company": "NVIDIA",
+      "link": "https://www.nvidia.com/",
+      "brand": "nvidia",
+      "badge": "NV",
+      "positions": [
+        {
+          "title": "Senior Physics-Machine Learning Engineer",
+          "meta": "Permanent Full-time",
+          "start": "Mar 2026",
+          "end": "Present",
+          "description": "Physics AI, PhysicsNeMo team"
+        }
+      ]
+    },
+    {
+      "company": "University of Toronto",
+      "link": "https://www.utoronto.ca/",
+      "brand": "uoft",
+      "badge": "UofT",
+      "positions": [
+        {
+          "title": "Course Director",
+          "start": "Jan 2023",
+          "end": "Present",
+          "location": "Toronto, Ontario, Canada | On-site",
+          "description": "Machine Learning"
+        }
+      ]
+    },
+    {
+      "company": "Autodesk",
+      "link": "https://www.autodesk.com/",
+      "brand": "autodesk",
+      "badge": "ADSK",
+      "positions": [
+        {
+          "title": "Principal AI Research Scientist",
+          "start": "May 2021",
+          "end": "Mar 2026",
+          "location": "Toronto, Ontario, Canada",
+          "description": "Large Models Team"
+        }
+      ]
+    },
+    {
+      "company": "York University",
+      "link": "https://www.yorku.ca/",
+      "brand": "york",
+      "badge": "YU",
+      "positions": [
+        {
+          "title": "Course Director",
+          "start": "Sep 2023",
+          "end": "Dec 2025",
+          "location": "Toronto, Ontario, Canada",
+          "description": "MECH 4403/EECS 1021 Artificial Intelligence and Generative Design for Mechanical Systems"
+        }
+      ]
+    }
+  ],
   "openSource": [
+    {
+      "name": "PhysicsNeMo",
+      "role": "contributor",
+      "link": "https://github.com/NVIDIA/physicsnemo",
+      "description": "NVIDIA's open-source framework for building, training, and fine-tuning physics-AI models at scale"
+    },
     {
       "name": "XLB",
       "role": "original creator and maintainer",
-      "stars": 432,
       "link": "https://github.com/Autodesk/XLB",
       "description": "Differentiable multi-GPU simulations in JAX and NVIDIA's Warp for physics-based machine learning"
     },
@@ -20,6 +87,16 @@
     }
   ],
   "patents": [
+    {
+      "title": "Training transformer models to generate mechanical assemblies",
+      "inventors": ["H. Cheong", "M. Ataei", "P. Jayaraman", "Y. Etesam"],
+      "number": "US Patent App. 19/262,805"
+    },
+    {
+      "title": "Generating mechanical assemblies using hybrid search algorithms and transformer models",
+      "inventors": ["H. Cheong", "Y. Etesam", "M. Ataei", "P. Jayaraman"],
+      "number": "US Patent App. 19/264,442"
+    },
     {
       "title": "Techniques for enabling conversational user interfaces for simulation applications via language models",
       "inventors": ["M. Ataei", "H. Salehipour", "A. Tessier"],
@@ -57,7 +134,7 @@
       "year": 2026,
       "authors": ["D. Bolanos", "M. Ataei", "P. Jayaraman"],
       "role": "project lead, intern manager",
-      "link": "https://arxiv.org/abs/2508.09005",
+      "link": "https://ojs.aaai.org/index.php/AAAI/article/view/39059",
       "type": "conference"
     },
     {

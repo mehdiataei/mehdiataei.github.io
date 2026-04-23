@@ -5,336 +5,497 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehdi Ataei</title>
     <style>
-        * {
-            box-sizing: border-box;
+        :root {
+            --bg: #ffffff;
+            --ink: #0a0a0a;
+            --ink-2: #27272a;
+            --muted: #71717a;
+            --muted-2: #a1a1aa;
+            --rule: #e4e4e7;
+            --rule-soft: #f4f4f5;
+            --accent: #0052cc;
+            --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
         }
+        * { box-sizing: border-box; }
+        html, body { background: var(--bg); }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            max-width: 900px;
+            font-family: var(--sans);
+            max-width: 880px;
             margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #fff;
+            padding: 56px 32px 72px;
+            line-height: 1.65;
+            font-size: 15px;
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "ss01", "cv11";
         }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* ===== Header ===== */
         header {
-            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 88px 1fr;
+            gap: 20px;
+            align-items: start;
+            margin-bottom: 52px;
         }
+        .avatar {
+            width: 88px;
+            height: 88px;
+            overflow: hidden;
+            background: var(--rule-soft);
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .head-meta { min-width: 0; }
         h1 {
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
             margin: 0 0 4px 0;
+            color: var(--ink);
         }
         .title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
-            font-size: 1rem;
-            color: #333;
+            font-size: 0.95rem;
+            color: var(--ink-2);
+            margin: 0 0 2px 0;
         }
-        .title .role {
-            font-weight: 500;
-        }
+        .title .role { font-weight: 500; }
+        .title .org { color: var(--muted); }
         .title .sep {
-            width: 4px;
-            height: 4px;
-            background: #999;
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background: var(--muted-2);
             border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 6px 2px;
         }
-        .title .org {
-            color: #666;
-            font-weight: 400;
+        .locus {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin: 0 0 16px 0;
         }
         .links {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
         }
         .links a, .links .copy-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            height: 34px;
-            padding: 0 12px;
-            background: #f7f7f7;
-            border: 1px solid #e5e5e5;
-            border-radius: 6px;
-            color: #333;
-            font-size: 0.9rem;
+            height: 28px;
+            padding: 0 10px;
+            background: transparent;
+            border: 1px solid var(--rule);
+            color: var(--ink-2);
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 500;
             text-decoration: none;
-            transition: background 0.15s, border-color 0.15s;
+            transition: border-color 0.12s, color 0.12s, background 0.12s;
         }
         .links a:hover, .links .copy-btn:hover {
-            background: #eee;
-            border-color: #ddd;
+            border-color: var(--ink-2);
+            color: var(--ink);
             text-decoration: none;
         }
-        .links a.icon-only {
-            padding: 0 10px;
-        }
+        .links a.icon-only { padding: 0 8px; }
         .links svg {
-            width: 16px;
-            height: 16px;
-            opacity: 0.7;
-        }
-        a {
-            color: #0055b3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            width: 13px;
+            height: 13px;
+            opacity: 0.72;
         }
         .copy-btn {
             cursor: pointer;
             font: inherit;
+            font-family: var(--sans);
         }
-        .copy-btn .check {
-            width: 14px;
-            height: 14px;
-            display: none;
-        }
-        .copy-btn .copied-text {
-            display: none;
-        }
+        .copy-btn .check { width: 13px; height: 13px; display: none; }
+        .copy-btn .copied-text { display: none; }
         .copy-btn.copied {
-            color: #1a7f37;
-            border-color: #1a7f37;
-            background: #f0fff4;
+            color: var(--ink);
+            border-color: var(--ink);
         }
-        .copy-btn.copied .email-text {
-            display: none;
-        }
-        .copy-btn.copied .copied-text {
-            display: inline;
-            font-weight: 500;
-        }
-        .copy-btn.copied .check {
-            display: inline;
-        }
-        section {
-            margin-bottom: 40px;
-        }
+        .copy-btn.copied .email-text { display: none; }
+        .copy-btn.copied .copied-text { display: inline; }
+        .copy-btn.copied .check { display: inline; }
+
+        /* ===== Sections ===== */
+        section { margin-bottom: 44px; }
         h2 {
-            font-size: 1.25rem;
+            font-size: 0.72rem;
             font-weight: 600;
-            margin: 0 0 16px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e5e5e5;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 0 0 22px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--rule);
         }
         p {
-            margin: 0 0 16px 0;
+            margin: 0 0 14px 0;
+            font-size: 0.95rem;
         }
-        ul {
-            margin: 0;
-            padding-left: 20px;
+        p:last-child { margin-bottom: 0; }
+        ul { margin: 0; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .section-note {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin: -10px 0 16px 0;
         }
-        li {
-            margin-bottom: 8px;
-        }
+
+        /* ===== Filters ===== */
         .filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 16px;
             margin-bottom: 20px;
+            font-size: 0.85rem;
         }
         .filter-btn {
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-        .filter-btn:hover {
-            background: #eee;
-        }
-        .filter-btn.active {
-            background: #1a1a1a;
-            color: #fff;
-            border-color: #1a1a1a;
-        }
-        .pub-list {
-            list-style: none;
+            background: none;
+            border: none;
             padding: 0;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            color: var(--muted);
+            transition: color 0.12s;
         }
+        .filter-btn:hover { color: var(--ink); }
+        .filter-btn.active {
+            color: var(--ink);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+        }
+
+        /* ===== Publications ===== */
+        .pub-list { list-style: none; padding: 0; }
         .pub-item {
-            padding: 16px 0;
-            border-bottom: 1px solid #eee;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--rule-soft);
         }
-        .pub-item:last-child {
-            border-bottom: none;
-        }
+        .pub-item:last-child { border-bottom: none; }
         .pub-title {
             font-weight: 600;
             margin-bottom: 4px;
             line-height: 1.4;
+            font-size: 0.95rem;
         }
         .pub-title a {
-            color: inherit;
+            color: var(--ink);
         }
         .pub-title a:hover {
-            color: #0055b3;
+            color: var(--accent);
+            text-decoration: none;
         }
         .pub-venue {
-            color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 4px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-bottom: 2px;
         }
         .pub-authors {
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.85rem;
+            color: var(--muted);
         }
         .pub-authors .me {
             font-weight: 600;
-            color: #1a1a1a;
+            color: var(--ink-2);
         }
         .pub-role {
-            background: #e8f4fd;
-            color: #0055b3;
-            font-size: 0.75rem;
-            padding: 2px 6px;
-            border-radius: 3px;
-            margin-left: 4px;
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--muted);
+            padding: 0 5px;
+            margin-left: 6px;
+            border: 1px solid var(--rule);
+            vertical-align: 1px;
         }
         .pub-type {
-            display: inline-block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 2px 6px;
-            border-radius: 3px;
-            margin-right: 8px;
-            background: #f0f0f0;
-            color: #555;
-        }
-        .pub-type.conference { background: #e3f2fd; color: #1565c0; }
-        .pub-type.journal { background: #e8f5e9; color: #2e7d32; }
-        .pub-type.workshop { background: #fff3e0; color: #e65100; }
-        .pub-type.preprint { background: #f3e5f5; color: #7b1fa2; }
-        .pub-type.tutorial { background: #fce4ec; color: #c2185b; }
-        .year-group {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333;
-            margin: 20px 0 0 0;
-        }
-        .year-group:first-child {
-            margin-top: 0;
-        }
-        .oss-list {
-            list-style: none;
+            display: inline;
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-right: 4px;
+            background: transparent;
+            border: none;
             padding: 0;
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: 400;
         }
+        .pub-type::after {
+            content: ' ·';
+            margin-left: 2px;
+        }
+        .pub-type.conference,
+        .pub-type.journal,
+        .pub-type.workshop,
+        .pub-type.preprint,
+        .pub-type.tutorial {
+            color: var(--muted);
+        }
+        .pub-type::first-letter {
+            text-transform: uppercase;
+        }
+
+        .year-group {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin: 26px 0 10px 0;
+        }
+        .year-group:first-child { margin-top: 0; }
+
+        /* ===== Open Source ===== */
+        .oss-list { list-style: none; padding: 0; }
         .oss-item {
-            padding: 14px 0;
-            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--rule-soft);
         }
-        .oss-item:last-child {
-            border-bottom: none;
-        }
+        .oss-item:last-child { border-bottom: none; }
         .oss-header {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             gap: 10px;
             margin-bottom: 4px;
+            flex-wrap: wrap;
         }
         .oss-name {
             font-weight: 600;
+            font-size: 0.95rem;
         }
-        .oss-name a {
-            color: inherit;
-        }
-        .oss-name a:hover {
-            color: #0055b3;
-        }
+        .oss-name a { color: var(--ink); }
+        .oss-name a:hover { color: var(--accent); text-decoration: none; }
         .oss-role {
-            font-size: 0.8rem;
-            color: #555;
+            font-size: 0.82rem;
+            color: var(--muted);
         }
         .oss-stars {
-            font-size: 0.8rem;
-            color: #656d76;
+            font-size: 0.82rem;
+            color: var(--muted);
             display: inline-flex;
             align-items: center;
             gap: 3px;
         }
         .oss-stars svg {
-            width: 14px;
-            height: 14px;
-            fill: #eac54f;
+            width: 12px;
+            height: 12px;
+            fill: var(--muted-2);
         }
         .oss-desc {
-            font-size: 0.9rem;
-            color: #555;
+            font-size: 0.88rem;
+            color: var(--ink-2);
         }
         .oss-contrib {
             font-size: 0.85rem;
-            color: #666;
+            color: var(--muted);
             margin-top: 16px;
-            padding-top: 12px;
-            border-top: 1px dashed #ddd;
+            padding-top: 14px;
+            border-top: 1px solid var(--rule-soft);
         }
-        .patent-list {
-            list-style: none;
-            padding: 0;
-        }
+
+        /* ===== Patents ===== */
+        .patent-list { list-style: none; padding: 0; }
         .patent-item {
             padding: 12px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--rule-soft);
         }
-        .patent-item:last-child {
-            border-bottom: none;
-        }
+        .patent-item:last-child { border-bottom: none; }
         .patent-title {
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             line-height: 1.4;
+            font-size: 0.95rem;
         }
         .patent-number {
-            font-size: 0.85rem;
-            color: #555;
+            font-size: 0.82rem;
+            color: var(--muted);
             margin-bottom: 2px;
         }
         .patent-inventors {
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.85rem;
+            color: var(--muted);
         }
         .patent-inventors .me {
             font-weight: 600;
-            color: #1a1a1a;
+            color: var(--ink-2);
         }
-        .section-note {
+
+        /* ===== Experience (CV-style, date-rail with vertical spine) ===== */
+        .experience-card {
+            position: relative;
+        }
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            left: 152px;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: var(--rule);
+        }
+        .exp-item {
+            display: grid;
+            grid-template-columns: 140px minmax(0, 1fr);
+            gap: 36px;
+            padding: 18px 0;
+            align-items: baseline;
+        }
+        .exp-item + .exp-item {
+            padding-top: 18px;
+        }
+        .exp-date {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+        }
+        .exp-date .sep {
+            color: var(--muted-2);
+            margin: 0 4px;
+        }
+        .exp-date .present {
+            color: var(--ink-2);
+            font-weight: 500;
+        }
+        .exp-body { min-width: 0; }
+        .exp-role {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.35;
+            letter-spacing: -0.005em;
+        }
+        .exp-org {
+            font-size: 0.9rem;
+            color: var(--ink-2);
+            margin-top: 3px;
+        }
+        .exp-org a {
+            color: var(--ink-2);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.12s, color 0.12s;
+        }
+        .exp-org a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+            text-decoration: none;
+        }
+        .exp-meta {
             font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 12px;
+            color: var(--muted);
+            margin-top: 4px;
         }
-        #publications {
-            transition: opacity 0.15s ease;
+        .exp-meta .dot {
+            display: inline-block;
+            width: 2px;
+            height: 2px;
+            background: var(--muted-2);
+            border-radius: 50%;
+            margin: 0 6px 3px;
+            vertical-align: middle;
         }
-        #publications.fade {
-            opacity: 0;
+        .exp-desc {
+            font-size: 0.88rem;
+            color: var(--ink-2);
+            margin-top: 6px;
+            overflow-wrap: anywhere;
         }
-        @media (max-width: 600px) {
+        /* Multi-position grouping under one company */
+        .exp-item-group .exp-org {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-top: 0;
+        }
+        .exp-item-group .exp-org a { color: var(--ink); }
+        .exp-positions {
+            display: grid;
+            gap: 14px;
+            margin-top: 12px;
+        }
+        .exp-position .exp-role { font-size: 0.92rem; font-weight: 500; }
+        .exp-position .exp-position-date {
+            font-size: 0.8rem;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+            margin-top: 2px;
+        }
+        #publications { transition: opacity 0.15s ease; }
+        #publications.fade { opacity: 0; }
+
+        @media (max-width: 640px) {
             body {
-                padding: 24px 16px;
+                padding: 36px 20px 56px;
+                font-size: 14.5px;
             }
-            h1 {
-                font-size: 1.6rem;
+            header {
+                grid-template-columns: 64px 1fr;
+                gap: 14px;
+                margin-bottom: 36px;
             }
-            .links {
-                gap: 6px 12px;
+            .avatar { width: 64px; height: 64px; }
+            h1 { font-size: 1.2rem; }
+            .title { font-size: 0.9rem; }
+            .locus { font-size: 0.82rem; }
+            .links a, .links .copy-btn {
+                font-size: 0.78rem;
+                height: 26px;
+                padding: 0 8px;
             }
+            .experience-card::before { display: none; }
+            .exp-item {
+                grid-template-columns: 1fr;
+                gap: 4px;
+                padding: 14px 0;
+                border-bottom: 1px solid var(--rule-soft);
+                align-items: start;
+            }
+            .exp-item:last-child { border-bottom: none; }
+            .exp-date {
+                font-size: 0.76rem;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                color: var(--muted-2);
+                margin-bottom: 2px;
+            }
+            .exp-role { font-size: 0.95rem; }
+            .exp-item-group .exp-org { font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mehdi Ataei</h1>
-        <div class="title"><span class="role">Principal AI Research Scientist</span><span class="sep"></span><span class="org">Autodesk AI Lab</span></div>
-        <nav class="links">
+        <div class="avatar"><img src="public/profile_pic.jpeg" alt="Mehdi Ataei"></div>
+        <div class="head-meta">
+            <h1>Mehdi Ataei</h1>
+            <div class="title"><span class="role">Senior Physics-Machine Learning Engineer</span><span class="sep"></span><span class="org">NVIDIA</span></div>
+            <div class="locus">Toronto, Canada</div>
+            <nav class="links">
             <a href="https://scholar.google.com/citations?user=4JSrYEAAAAAJ&hl=en" target="_blank">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14a7 7 0 0 0 0-14z"/></svg>
                 Scholar
@@ -350,21 +511,20 @@
             <a href="https://x.com/AtaeiMe" target="_blank" class="icon-only">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <button type="button" class="copy-btn" id="copy-btn" title="Copy email">
-                <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6l9-6"/></svg>
-                <span class="email-text">ataei8@gmail.com</span>
-                <span class="copied-text">Copied!</span>
-                <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 6L9 17l-5-5"/>
-                </svg>
-            </button>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <section>
+        <h2>Experience</h2>
+        <div id="experience"></div>
+    </section>
+
+    <section id="about">
         <h2>About</h2>
-        <p>I am a member of the Foundation Models team at <a href="https://www.research.autodesk.com/research-areas/science/ai-lab/" target="_blank">Autodesk AI Lab</a>, where I develop generative models for design and engineering. My research focuses on synthetic data as an enabler for generative AI, investigating how simulation and procedural generation can produce the structured, domain-rich datasets these models require.</p>
-        <p>My background spans physics-informed machine learning and high-performance computing. I completed my Ph.D. in Computational Physics at the University of Toronto, where I was a Postgraduate Affiliate at the <a href="https://vectorinstitute.ai/" target="_blank">Vector Institute</a>. I hold a B.Sc. in Mechanical Engineering from Sharif University of Technology. I am an instructor in AI and machine learning at the University of Toronto and York University.</p>
+        <p>I work at the intersection of physics, AI, and engineering. At <a href="https://www.nvidia.com/" target="_blank">NVIDIA</a>, I'm a Senior Physics-Machine Learning Engineer on the <a href="https://developer.nvidia.com/physicsnemo" target="_blank">PhysicsNeMo</a> team, working on scalable physics-AI frameworks for scientific computing and engineering.</p>
+        <p>Before NVIDIA, I spent five years at <a href="https://www.autodesk.com/" target="_blank">Autodesk</a> as a Principal AI Research Scientist, most recently in the <a href="https://www.research.autodesk.com/research-areas/science/ai-lab/" target="_blank">Autodesk AI Lab</a>. I led research on generative and agentic AI for engineering design. My work there spanned transformer-based models for mechanical assembly and kinematic mechanism synthesis, multi-agent LLM frameworks for design applications, and simulation-feedback fine-tuning of generative design models. During that time I also created <a href="https://github.com/Autodesk/XLB" target="_blank">XLB</a>, a differentiable lattice-Boltzmann library in JAX and NVIDIA Warp.</p>
+        <p>I hold a Ph.D. in Computational Physics from the University of Toronto and was a Postgraduate Affiliate at the <a href="https://vectorinstitute.ai/" target="_blank">Vector Institute</a>. I earned my B.Sc. in Mechanical Engineering from Sharif University of Technology and teach AI and machine learning at the University of Toronto and York University.</p>
     </section>
 
     <section>
@@ -392,36 +552,89 @@
     </section>
 
     <script>
-        document.getElementById('copy-btn').addEventListener('click', function() {
-            const btn = this;
-            const email = 'ataei8@gmail.com';
-
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(email).then(function() {
-                    btn.classList.add('copied');
-                    setTimeout(function() { btn.classList.remove('copied'); }, 1500);
-                });
-            } else {
-                const ta = document.createElement('textarea');
-                ta.value = email;
-                ta.style.position = 'fixed';
-                ta.style.opacity = '0';
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                btn.classList.add('copied');
-                setTimeout(function() { btn.classList.remove('copied'); }, 1500);
-            }
-        });
-
         async function loadData() {
             const res = await fetch('publications.json');
             const data = await res.json();
             window.publications = data.publications;
+            renderExperience(data.experience || []);
             renderPatents(data.patents);
             renderOpenSource(data.openSource);
             renderPublications('all');
+        }
+
+        function renderExperience(experience) {
+            const container = document.getElementById('experience');
+            if (!experience.length) {
+                container.innerHTML = '';
+                return;
+            }
+
+            const fmtDate = (d) => {
+                if (!d) return '';
+                if (d.toLowerCase() === 'present') return '<span class="present">Present</span>';
+                return d;
+            };
+            const dateRange = (start, end) =>
+                `${fmtDate(start)}<span class="sep">—</span>${fmtDate(end)}`;
+
+            let html = '<div class="experience-card">';
+
+            experience.forEach(entry => {
+                const companyName = entry.link
+                    ? `<a href="${entry.link}" target="_blank">${entry.company}</a>`
+                    : entry.company;
+
+                if (entry.positions.length === 1) {
+                    const p = entry.positions[0];
+                    const metaParts = [companyName];
+                    if (p.meta) metaParts.push(p.meta);
+                    if (p.location) metaParts.push(p.location);
+                    const metaLine = metaParts
+                        .map((part, i) => i === 0 ? `<span class="exp-org-inline">${part}</span>` : part)
+                        .join('<span class="dot"></span>');
+                    html += `
+                        <article class="exp-item">
+                            <div class="exp-date">${dateRange(p.start, p.end)}</div>
+                            <div class="exp-body">
+                                <div class="exp-role">${p.title}</div>
+                                <div class="exp-org">${companyName}</div>
+                                ${(p.meta || p.location) ? `<div class="exp-meta">${[p.meta, p.location].filter(Boolean).join(' · ')}</div>` : ''}
+                                ${p.description ? `<div class="exp-desc">${p.description}</div>` : ''}
+                            </div>
+                        </article>
+                    `;
+                    return;
+                }
+
+                const starts = entry.positions.map(p => p.start);
+                const ends = entry.positions.map(p => p.end);
+                const spanStart = starts[starts.length - 1] || starts[0];
+                const spanEnd = ends[0];
+
+                const positions = entry.positions.map(p => `
+                    <div class="exp-position">
+                        <div class="exp-role">${p.title}</div>
+                        <div class="exp-position-date">${dateRange(p.start, p.end)}</div>
+                        ${p.meta ? `<div class="exp-meta">${p.meta}</div>` : ''}
+                        ${p.location ? `<div class="exp-meta">${p.location}</div>` : ''}
+                        ${p.description ? `<div class="exp-desc">${p.description}</div>` : ''}
+                    </div>
+                `).join('');
+
+                html += `
+                    <article class="exp-item exp-item-group">
+                        <div class="exp-date">${dateRange(spanStart, spanEnd)}</div>
+                        <div class="exp-body">
+                            <div class="exp-org">${companyName}</div>
+                            ${entry.location ? `<div class="exp-meta">${entry.location}</div>` : ''}
+                            <div class="exp-positions">${positions}</div>
+                        </div>
+                    </article>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
         }
 
         function renderPatents(patents) {
@@ -449,14 +662,12 @@
             const container = document.getElementById('opensource');
             let html = '';
             projects.forEach(p => {
-                const starsHtml = p.stars ? `<span class="oss-stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>${p.stars}</span>` : '';
                 const roleHtml = p.role ? `<span class="oss-role">(${p.role})</span>` : '';
                 html += `
                     <li class="oss-item">
                         <div class="oss-header">
                             <span class="oss-name"><a href="${p.link}" target="_blank">${p.name}</a></span>
                             ${roleHtml}
-                            ${starsHtml}
                         </div>
                         <div class="oss-desc">${p.description}</div>
                     </li>
