@@ -61,10 +61,27 @@
       ]
     }
   ],
+  "datasets": [
+    {
+      "name": "Zero-to-CAD",
+      "link": "https://huggingface.co/collections/ADSKAILab/zero-to-cad",
+      "description": "Datasets (1M & 100K) of executable CAD construction sequences synthesized via an agentic LLM in a CadQuery environment, plus a fine-tuned vision-language model for CAD-from-image reconstruction. No real construction-history data used."
+    },
+    {
+      "name": "GearFormer Gear-Train Dataset",
+      "link": "https://github.com/GearFormer/GearFormer/tree/main/dataset",
+      "description": "Curated dataset of valid gear-train configurations (train / val / test splits) used to train GearFormer, a generative transformer model for mechanical system configuration design"
+    },
+    {
+      "name": "DesignQA",
+      "link": "https://design-qa.github.io/",
+      "description": "A multimodal benchmark for evaluating LLMs' understanding of engineering documentation"
+    }
+  ],
   "openSource": [
     {
       "name": "PhysicsNeMo",
-      "role": "contributor",
+      "role": "Member",
       "link": "https://github.com/NVIDIA/physicsnemo",
       "description": "NVIDIA's open-source framework for building, training, and fine-tuning physics-AI models at scale"
     },
@@ -73,11 +90,6 @@
       "role": "original creator and maintainer",
       "link": "https://github.com/Autodesk/XLB",
       "description": "Differentiable multi-GPU simulations in JAX and NVIDIA's Warp for physics-based machine learning"
-    },
-    {
-      "name": "DesignQA",
-      "link": "https://design-qa.github.io/",
-      "description": "A multimodal benchmark for evaluating LLMs' understanding of engineering documentation"
     },
     {
       "name": "LBfoam",
@@ -119,6 +131,14 @@
     }
   ],
   "publications": [
+    {
+      "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "authors": ["M. Ataei", "F. Askari", "K. R. Malekshan", "P. Jayaraman"],
+      "link": "https://arxiv.org/abs/2604.24479",
+      "type": "preprint"
+    },
     {
       "title": "Physics Context Builders: A Modular Framework for Physical Reasoning in Vision-Language Models",
       "venue": "International Conference on Computer Vision (ICCV)",

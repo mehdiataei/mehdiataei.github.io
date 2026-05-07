@@ -546,6 +546,11 @@
     </section>
 
     <section>
+        <h2>Datasets</h2>
+        <ul class="oss-list" id="datasets"></ul>
+    </section>
+
+    <section>
         <h2>Open Source</h2>
         <ul class="oss-list" id="opensource"></ul>
         <p class="oss-contrib">Also contributed minor features and bug fixes to <a href="https://github.com/NVIDIA/warp" target="_blank">NVIDIA Warp</a>.</p>
@@ -558,6 +563,7 @@
             window.publications = data.publications;
             renderExperience(data.experience || []);
             renderPatents(data.patents);
+            renderDatasets(data.datasets || []);
             renderOpenSource(data.openSource);
             renderPublications('all');
         }
@@ -658,8 +664,9 @@
             container.innerHTML = html;
         }
 
-        function renderOpenSource(projects) {
-            const container = document.getElementById('opensource');
+        function renderProjectList(containerId, projects) {
+            const container = document.getElementById(containerId);
+            if (!container || !projects) return;
             let html = '';
             projects.forEach(p => {
                 const roleHtml = p.role ? `<span class="oss-role">(${p.role})</span>` : '';
@@ -675,6 +682,8 @@
             });
             container.innerHTML = html;
         }
+        function renderOpenSource(projects) { renderProjectList('opensource', projects); }
+        function renderDatasets(projects) { renderProjectList('datasets', projects); }
 
         function renderPublications(filter) {
             const container = document.getElementById('publications');
