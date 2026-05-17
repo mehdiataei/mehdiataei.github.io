@@ -100,6 +100,26 @@
   ],
   "patents": [
     {
+      "title": "Iterative design of machine assemblies using machine learning models",
+      "inventors": ["M. Ataei", "J.F. Matejka", "G.W. Fitzmaurice", "H. Cheong", "A. Tessier"],
+      "number": "US Patent App. 19/255,671"
+    },
+    {
+      "title": "Generating information in real-time during modifications to rendered product assemblies",
+      "inventors": ["M. Ataei", "H. Cheong", "J.F. Matejka", "G.W. Fitzmaurice", "A. Tessier"],
+      "number": "US Patent App. 19/274,294"
+    },
+    {
+      "title": "Techniques for implementing an auto-completion system for mechanical assembly designs",
+      "inventors": ["M. Ataei", "H. Cheong", "J.F. Matejka", "G.W. Fitzmaurice", "A. Tessier"],
+      "number": "US Patent App. 19/224,542"
+    },
+    {
+      "title": "Visualization of assembly designs generated using machine learning models",
+      "inventors": ["M. Ataei", "H. Cheong", "J.F. Matejka", "G.W. Fitzmaurice", "A. Tessier"],
+      "number": "US Patent App. 19/255,668"
+    },
+    {
       "title": "Training transformer models to generate mechanical assemblies",
       "inventors": ["H. Cheong", "M. Ataei", "P. Jayaraman", "Y. Etesam"],
       "number": "US Patent App. 19/262,805"
