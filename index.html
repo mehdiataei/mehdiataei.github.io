@@ -293,6 +293,28 @@
             font-size: 0.82rem;
             color: var(--muted);
         }
+        .oss-kind {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border: 1px solid var(--rule);
+            padding: 1px 6px;
+            vertical-align: 1px;
+        }
+        .oss-kind-model     { color: var(--accent); border-color: var(--accent); }
+        .oss-kind-dataset   { color: var(--ink-2);  border-color: var(--rule); }
+        .oss-kind-benchmark { color: var(--ink-2);  border-color: var(--rule); }
+        .oss-downloads {
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+        .oss-downloads::before {
+            content: '↓ ';
+            color: var(--muted-2);
+        }
         .oss-stars {
             font-size: 0.82rem;
             color: var(--muted);
@@ -546,7 +568,7 @@
     </section>
 
     <section>
-        <h2>Datasets</h2>
+        <h2>Datasets &amp; Models</h2>
         <ul class="oss-list" id="datasets"></ul>
     </section>
 
@@ -669,12 +691,16 @@
             if (!container || !projects) return;
             let html = '';
             projects.forEach(p => {
+                const kindHtml = p.kind ? `<span class="oss-kind oss-kind-${p.kind.toLowerCase()}">${p.kind}</span>` : '';
                 const roleHtml = p.role ? `<span class="oss-role">(${p.role})</span>` : '';
+                const downloadsHtml = p.downloads ? `<span class="oss-downloads">${p.downloads} downloads</span>` : '';
                 html += `
                     <li class="oss-item">
                         <div class="oss-header">
                             <span class="oss-name"><a href="${p.link}" target="_blank">${p.name}</a></span>
+                            ${kindHtml}
                             ${roleHtml}
+                            ${downloadsHtml}
                         </div>
                         <div class="oss-desc">${p.description}</div>
                     </li>

@@ -63,17 +63,40 @@
   ],
   "datasets": [
     {
+      "name": "Zero-To-CAD Qwen3-VL-2B",
+      "kind": "Model",
+      "downloads": "120k+",
+      "link": "https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+      "description": "Vision-language model (based on Qwen3-VL-2B) fine-tuned on the Zero-to-CAD dataset to reconstruct editable parametric CAD programs directly from multi-view images"
+    },
+    {
       "name": "Zero-to-CAD",
+      "kind": "Dataset",
+      "downloads": "30k+",
       "link": "https://huggingface.co/collections/ADSKAILab/zero-to-cad",
-      "description": "Datasets (1M & 100K) of executable CAD construction sequences synthesized via an agentic LLM in a CadQuery environment, plus a fine-tuned vision-language model for CAD-from-image reconstruction. No real construction-history data used."
+      "description": "Datasets (1M and 100K subsets) of executable CAD construction sequences synthesized via an agentic LLM in a CadQuery environment. No real construction-history data used."
+    },
+    {
+      "name": "MechaFormer",
+      "kind": "Model",
+      "link": "https://github.com/dianabolanos/mechaformer",
+      "description": "Transformer-based model that frames kinematic mechanism design as a conditional sequence-generation task, synthesizing four-, six-, and eight-bar linkages that trace specified target paths (AAAI 2026)"
+    },
+    {
+      "name": "GearFormer",
+      "kind": "Model",
+      "link": "https://github.com/GearFormer/GearFormer",
+      "description": "Deep generative transformer for mechanical system configuration design, focused on gear-train synthesis. Includes code, weights, and search baselines (MCTS, EDA) accompanying the AAAI 2025 paper."
     },
     {
       "name": "GearFormer Gear-Train Dataset",
+      "kind": "Dataset",
       "link": "https://github.com/GearFormer/GearFormer/tree/main/dataset",
-      "description": "Curated dataset of valid gear-train configurations (train / val / test splits) used to train GearFormer, a generative transformer model for mechanical system configuration design"
+      "description": "Curated dataset of valid gear-train configurations (train / val / test splits) used to train GearFormer for generative mechanical system configuration design"
     },
     {
       "name": "DesignQA",
+      "kind": "Benchmark",
       "link": "https://design-qa.github.io/",
       "description": "A multimodal benchmark for evaluating LLMs' understanding of engineering documentation"
     }
