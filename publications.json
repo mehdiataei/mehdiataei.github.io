@@ -65,14 +65,14 @@
     {
       "name": "Zero-To-CAD Qwen3-VL-2B",
       "kind": "Model",
-      "downloads": "120k+",
+      "downloads": "130k+",
       "link": "https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
       "description": "Vision-language model (based on Qwen3-VL-2B) fine-tuned on the Zero-to-CAD dataset to reconstruct editable parametric CAD programs directly from multi-view images"
     },
     {
       "name": "Zero-to-CAD",
       "kind": "Dataset",
-      "downloads": "30k+",
+      "downloads": "85k+",
       "link": "https://huggingface.co/collections/ADSKAILab/zero-to-cad",
       "description": "Datasets (1M and 100K subsets) of executable CAD construction sequences synthesized via an agentic LLM in a CadQuery environment. No real construction-history data used."
     },
