@@ -148,6 +148,11 @@
       "number": "US Patent App. 19/262,805"
     },
     {
+      "title": "Training transformer models to generate mechanical assemblies",
+      "inventors": ["H. Cheong", "M. Ataei", "P. Jayaraman", "Y. Etesam"],
+      "number": "US Patent App. 19/262,792"
+    },
+    {
       "title": "Generating mechanical assemblies using hybrid search algorithms and transformer models",
       "inventors": ["H. Cheong", "Y. Etesam", "M. Ataei", "P. Jayaraman"],
       "number": "US Patent App. 19/264,442"
@@ -174,6 +179,21 @@
     }
   ],
   "publications": [
+    {
+      "title": "FlashNeRD: Performance-First Contact-Rich Neural Robot Dynamics",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "authors": ["M. Ataei", "M. A. Nabian", "J. Xu", "M. Macklin", "Y. Narang", "E. Heiden", "O. Zhang", "et al."],
+      "link": "https://arxiv.org/abs/2610.09130",
+      "type": "preprint"
+    },
+    {
+      "title": "Generative Artificial Intelligence for Classification, Prediction, and Discovery of Consumer Product Recalls",
+      "venue": "ASME Journal of Computing and Information Science in Engineering",
+      "year": 2026,
+      "authors": ["D. Bolanos", "M. Ataei", "D. Grandi", "K. Goucher-Lambert"],
+      "type": "journal"
+    },
     {
       "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
       "venue": "arXiv preprint",
