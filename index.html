@@ -76,8 +76,9 @@
         .toc a:hover, .toc a.active { color: var(--ink); background: var(--paper-2); }
 
         /* ===== Title block ===== */
-        .titleblock { padding: 64px 0 28px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
-        .kicker { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 18px; }
+        .titleblock { padding: 64px 0 40px; display: grid; grid-template-columns: auto 1fr auto; gap: 36px; align-items: center; border-bottom: 1.5px solid var(--rule-strong); }
+        .portrait { width: 168px; height: 168px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 5px var(--paper), 0 0 0 6px var(--rule-strong); }
+        .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
         h1 {
             font-family: var(--display); font-weight: 400;
             font-size: clamp(56px, 9vw, 112px); line-height: .92; letter-spacing: -.02em;
@@ -91,29 +92,6 @@
         .contact a::after { content: '↗'; color: var(--muted); font-size: 11px; transition: transform .15s, color .15s; }
         .contact a:hover::after { color: var(--accent); transform: translate(2px,-2px); }
 
-        /* ===== Teaser figure: live LBM ===== */
-        .teaser { margin: 8px 0 0; }
-        .flow {
-            position: relative; width: 100%; height: 260px;
-            border-top: 1.5px solid var(--rule-strong); border-bottom: 1px solid var(--rule);
-            overflow: hidden; cursor: crosshair; touch-action: pan-y;
-            background:
-                radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--muted) 30%, transparent) 1px, transparent 0) 0 0 / 12px 12px;
-        }
-        .flow canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-        .flow .obstacle {
-            position: absolute; border-radius: 50%; overflow: hidden; transform: translate(-50%, -50%);
-            box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px var(--rule-strong);
-            pointer-events: none;
-        }
-        .flow .obstacle img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .flow .hud {
-            position: absolute; right: 12px; top: 10px; font-family: var(--mono); font-size: 11px; color: var(--muted);
-            background: color-mix(in srgb, var(--paper) 80%, transparent); padding: 2px 6px; border-radius: 3px; pointer-events: none;
-        }
-        figcaption.cap { font-size: 14.5px; color: var(--ink-2); margin-top: 10px; line-height: 1.5; }
-        figcaption.cap b { font-family: var(--mono); font-weight: 600; font-size: 12px; letter-spacing: .03em; color: var(--ink); margin-right: 6px; }
-        figcaption.cap .hint { color: var(--muted); font-style: italic; }
 
         /* ===== Sections ===== */
         section { padding: 56px 0 8px; }
@@ -134,16 +112,15 @@
 
         /* Timeline (experience, teaching) */
         .timeline { list-style: none; margin: 0; padding: 0; }
-        .tl-item { display: grid; grid-template-columns: 64px 180px 1fr auto; gap: 0 12px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+        .tl-item { display: grid; grid-template-columns: 76px 1fr auto; gap: 0 20px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--rule); }
         .tl-item:last-child { border-bottom: none; }
-        .tl-idx { font-family: var(--mono); font-size: 12px; color: var(--muted); }
-        .tl-date { font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
+                .tl-date { font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
         .tl-date .now { color: var(--accent); }
-        .tl-role { font-weight: 600; font-size: 17.5px; line-height: 1.35; }
-        .tl-org { color: var(--ink-2); }
+        .tl-role { font-weight: 600; font-size: 19px; line-height: 1.3; }
+        .tl-org { color: var(--ink-2); font-size: 16.5px; }
         .tl-org a { text-decoration: none; }
         .tl-desc { color: var(--muted); font-size: 15px; font-style: italic; }
-        .tl-logo { width: 34px; height: 34px; background: #fff; border: 1px solid var(--rule); border-radius: 50%; display: grid; place-items: center; padding: 6px; align-self: center; }
+        .tl-logo { width: 76px; height: 76px; background: #fff; border: 1px solid var(--rule); border-radius: 14px; display: grid; place-items: center; padding: 12px; }
         .tl-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
 
         /* Filters */
@@ -237,9 +214,9 @@
             body { font-size: 16px; }
             .wrap { padding: 0 16px; }
             .runhead .mark { display: none; }
-            .titleblock { grid-template-columns: 1fr; padding-top: 40px; gap: 18px; }
+            .titleblock { grid-template-columns: 1fr; padding-top: 32px; gap: 18px; }
+            .portrait { width: 112px; height: 112px; }
             .contact { flex-direction: row; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
-            .flow { height: 200px; }
             .sec-head { grid-template-columns: 40px 1fr; }
             .sec-head .filters { grid-column: 1 / -1; margin-top: 12px; }
             h2 { font-size: 34px; }
@@ -247,10 +224,9 @@
             .abstract > div:first-child { display: none; }
             .abstract .body { column-count: 1; text-align: left; }
             .keywords { grid-column: 1; }
-            .tl-item { grid-template-columns: 40px 1fr auto; }
-            .tl-date { grid-column: 2; grid-row: 1; }
-            .tl-main { grid-column: 2; }
-            .tl-logo { grid-column: 3; grid-row: 1 / span 2; }
+            .tl-item { grid-template-columns: 56px 1fr; gap: 4px 14px; align-items: start; }
+            .tl-logo { width: 56px; height: 56px; padding: 8px; border-radius: 12px; grid-row: 1 / span 2; }
+            .tl-date { grid-column: 2; grid-row: 2; }
             .year-row { grid-template-columns: 1fr; }
             .year-row span { grid-column: 1; }
             .ref, .patents .ref { grid-template-columns: 40px 1fr; gap: 12px 8px; }
@@ -286,8 +262,8 @@
 
     <main class="wrap" id="top">
         <header class="titleblock">
+            <div class="portrait"><img src="public/profile_pic.jpeg" alt="Mehdi Ataei"></div>
             <div>
-                <p class="kicker">Physics · Machine Learning · Engineering Design</p>
                 <h1>Mehdi <em>Ataei</em></h1>
                 <p class="affil">Senior Physics-Machine Learning Engineer, NVIDIA <span class="loc">— Toronto, Canada</span></p>
             </div>
@@ -299,14 +275,6 @@
             </nav>
         </header>
 
-        <figure class="teaser">
-            <div class="flow" id="flow" aria-label="Interactive fluid simulation">
-                <canvas id="flow-canvas"></canvas>
-                <div class="obstacle" id="obstacle"><img src="public/profile_pic.jpeg" alt="Mehdi Ataei"></div>
-                <div class="hud">D2Q9 · BGK · Re ≈ 100</div>
-            </div>
-            <figcaption class="cap"><b>Fig. 1.</b> Vorticity of a live lattice-Boltzmann simulation of flow past the author, computed in your browser. <span class="hint">Drag across the field to stir it.</span></figcaption>
-        </figure>
 
         <section id="abstract">
             <div class="sec-head"><span class="sec-num">§0</span><h2>Abstract</h2></div>
@@ -397,8 +365,8 @@
             const data = await (await fetch('publications.json')).json();
             window.publications = data.publications;
             const exp = data.experience || [];
-            renderTimeline('experience-list', 'E', exp.filter(e => e.category !== 'teaching'));
-            renderTimeline('teaching-list', 'T', exp.filter(e => e.category === 'teaching'));
+            renderTimeline('experience-list', exp.filter(e => e.category !== 'teaching'));
+            renderTimeline('teaching-list', exp.filter(e => e.category === 'teaching'));
             renderFilters(data.publications);
             renderPublications('all');
             renderPatents(data.patents);
@@ -408,20 +376,17 @@
             onScroll();
         }
 
-        function renderTimeline(id, prefix, entries) {
+        function renderTimeline(id, entries) {
             const fmt = d => d && d.toLowerCase() === 'present' ? '<span class="now">present</span>' : d;
-            let i = 0;
             document.getElementById(id).innerHTML = entries.flatMap(e => e.positions.map(p => {
-                i++;
                 const org = e.link ? `<a href="${e.link}" target="_blank" rel="noopener">${e.company}</a>` : e.company;
                 return `<li class="tl-item">
-                    <span class="tl-idx">${prefix}.${i}</span>
-                    <span class="tl-date">${fmt(p.start)} — ${fmt(p.end)}</span>
+                    ${LOGOS[e.brand] ? `<span class="tl-logo"><img src="${LOGOS[e.brand]}" alt="${e.company}"></span>` : '<span></span>'}
                     <div class="tl-main">
                         <div class="tl-role">${p.title}</div>
                         <div class="tl-org">${org}${p.description ? ` · <span class="tl-desc">${p.description}</span>` : ''}</div>
                     </div>
-                    ${LOGOS[e.brand] ? `<span class="tl-logo"><img src="${LOGOS[e.brand]}" alt="${e.company}"></span>` : '<span></span>'}
+                    <span class="tl-date">${fmt(p.start)} — ${fmt(p.end)}</span>
                 </li>`;
             })).join('');
         }
@@ -458,7 +423,7 @@
                     const ref = all.length - all.indexOf(p);   // stable reference number, newest = highest
                     return `<li class="ref">
                         <span class="ref-idx">[${pad(ref)}]</span>
-                        ${figure(p, p.type, all.indexOf(p) + 2)}
+                        ${figure(p, p.type, all.indexOf(p) + 1)}
                         <div class="ref-body">
                             <h3 class="ref-title">${p.link ? `<a href="${p.link}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</h3>
                             <div class="ref-authors">${people(p.authors)}</div>
@@ -520,148 +485,5 @@
         loadData();
     </script>
 
-    <script>
-    /* Fig. 1 — D2Q9 lattice-Boltzmann (BGK) flow past a cylinder; the cylinder is the profile photo. */
-    (() => {
-        const box = document.getElementById('flow');
-        const canvas = document.getElementById('flow-canvas');
-        const ctx = canvas.getContext('2d');
-        const obstacleEl = document.getElementById('obstacle');
-        const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        const cx = [0, 1, 0, -1, 0, 1, -1, -1, 1];
-        const cy = [0, 0, 1, 0, -1, 1, 1, -1, -1];
-        const w = [4/9, 1/9, 1/9, 1/9, 1/9, 1/36, 1/36, 1/36, 1/36];
-        const opp = [0, 3, 4, 1, 2, 7, 8, 5, 6];
-        const U0 = 0.09, TAU = 0.555, OMEGA = 1 / TAU;
-
-        let NX, NY, N, f, ftmp, solid, ux, uy, rho, img, off, offCtx, colPos, colNeg, visible = true;
-
-        function readColors() {
-            const cs = getComputedStyle(document.documentElement);
-            const hex = v => { const h = cs.getPropertyValue(v).trim().replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); };
-            colPos = hex('--accent'); colNeg = hex('--cool');
-        }
-
-        function setEq(arr, i, r, u, v) {
-            const usq = 1.5 * (u * u + v * v);
-            for (let k = 0; k < 9; k++) {
-                const cu = 3 * (cx[k] * u + cy[k] * v);
-                arr[k * N + i] = w[k] * r * (1 + cu + 0.5 * cu * cu - usq);
-            }
-        }
-
-        function init() {
-            const rect = box.getBoundingClientRect();
-            NX = rect.width < 600 ? 170 : 260;
-            NY = Math.max(40, Math.round(NX * rect.height / rect.width));
-            N = NX * NY;
-            f = new Float32Array(9 * N); ftmp = new Float32Array(9 * N);
-            solid = new Uint8Array(N); ux = new Float32Array(N); uy = new Float32Array(N); rho = new Float32Array(N).fill(1);
-            const R = Math.round(NY * 0.14), X0 = Math.round(NX * 0.14), Y0 = Math.round(NY / 2) + 1;
-            for (let y = 0; y < NY; y++) for (let x = 0; x < NX; x++) {
-                const i = y * NX + x;
-                if ((x - X0) ** 2 + (y - Y0) ** 2 <= R * R) solid[i] = 1;
-                // a slight transverse perturbation breaks symmetry so vortex shedding starts quickly
-                setEq(f, i, 1, U0, 0.01 * Math.sin(2 * Math.PI * x / NX));
-            }
-            const sx = rect.width / NX, sy = rect.height / NY;
-            obstacleEl.style.left = `${(X0 + 0.5) * sx}px`;
-            obstacleEl.style.top = `${(Y0 + 0.5) * sy}px`;
-            obstacleEl.style.width = obstacleEl.style.height = `${(2 * R + 1) * sx}px`;
-            off = document.createElement('canvas'); off.width = NX; off.height = NY;
-            offCtx = off.getContext('2d'); img = offCtx.createImageData(NX, NY);
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
-            canvas.width = Math.round(rect.width * dpr); canvas.height = Math.round(rect.height * dpr);
-        }
-
-        function step() {
-            for (let y = 0; y < NY; y++) {
-                const yu = (y + 1) % NY, yd = (y - 1 + NY) % NY;
-                for (let x = 0; x < NX; x++) {
-                    const i = y * NX + x;
-                    if (solid[i]) continue;
-                    let r = 0, mx = 0, my = 0;
-                    for (let k = 0; k < 9; k++) { const fk = f[k * N + i]; r += fk; mx += cx[k] * fk; my += cy[k] * fk; }
-                    let u = mx / r, v = my / r;
-                    if (x === 0) { r = 1; u = U0; v = 0; }               // inflow
-                    rho[i] = r; ux[i] = u; uy[i] = v;
-                    const usq = 1.5 * (u * u + v * v);
-                    for (let k = 0; k < 9; k++) {
-                        const cu = 3 * (cx[k] * u + cy[k] * v);
-                        const feq = w[k] * r * (1 + cu + 0.5 * cu * cu - usq);
-                        const post = x === 0 ? feq : f[k * N + i] + OMEGA * (feq - f[k * N + i]);
-                        const nx = x + cx[k];
-                        if (nx < 0 || nx >= NX) continue;
-                        const ny = cy[k] === 1 ? yu : cy[k] === -1 ? yd : y;  // periodic in y
-                        const j = ny * NX + nx;
-                        if (solid[j]) ftmp[opp[k] * N + i] = post;       // half-way bounce-back
-                        else ftmp[k * N + j] = post;
-                    }
-                }
-            }
-            for (let y = 0; y < NY; y++) {
-                const a = y * NX + NX - 1;                               // outflow: zero gradient
-                for (let k = 0; k < 9; k++) ftmp[k * N + a] = ftmp[k * N + a - 1];
-                setEq(ftmp, y * NX, 1, U0, 0);                           // inflow: equilibrium
-            }
-            const t = f; f = ftmp; ftmp = t;
-        }
-
-        function render() {
-            const d = img.data;
-            for (let y = 0; y < NY; y++) {
-                const yu = (y + 1) % NY, yd = (y - 1 + NY) % NY;
-                for (let x = 0; x < NX; x++) {
-                    const i = y * NX + x, p = 4 * i;
-                    if (solid[i] || x === 0 || x === NX - 1) { d[p + 3] = 0; continue; }
-                    const curl = (uy[i + 1] - uy[i - 1]) - (ux[yu * NX + x] - ux[yd * NX + x]);
-                    const a = Math.min(1, Math.abs(curl) * 22);
-                    const c = curl > 0 ? colPos : colNeg;
-                    d[p] = c[0]; d[p + 1] = c[1]; d[p + 2] = c[2]; d[p + 3] = Math.round(225 * Math.pow(a, 1.15));
-                }
-            }
-            offCtx.putImageData(img, 0, 0);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
-            ctx.drawImage(off, 0, 0, canvas.width, canvas.height);
-        }
-
-        // Stirring: nudge a small disk of fluid toward the pointer's velocity
-        let last = null;
-        box.addEventListener('pointermove', ev => {
-            const r = box.getBoundingClientRect();
-            const gx = (ev.clientX - r.left) / r.width * NX, gy = (ev.clientY - r.top) / r.height * NY;
-            if (last) {
-                let du = (gx - last[0]) * 0.03, dv = (gy - last[1]) * 0.03;
-                const m = Math.hypot(du, dv); if (m > 0.1) { du *= 0.1 / m; dv *= 0.1 / m; }
-                const rad = 4;
-                for (let y = Math.max(0, Math.floor(gy - rad)); y <= Math.min(NY - 1, gy + rad); y++)
-                    for (let x = Math.max(1, Math.floor(gx - rad)); x <= Math.min(NX - 2, gx + rad); x++) {
-                        const i = y * NX + x;
-                        if (solid[i] || (x - gx) ** 2 + (y - gy) ** 2 > rad * rad) continue;
-                        setEq(f, i, rho[i], ux[i] * 0.5 + du, uy[i] * 0.5 + dv);
-                    }
-            }
-            last = [gx, gy];
-        });
-        box.addEventListener('pointerleave', () => { last = null; });
-
-        const settle = () => { for (let s = 0; s < 2500; s++) step(); render(); };
-        let warm = 120;  // run faster for the first ~2 s so the wake is already developed
-        function frame() {
-            if (visible) { const n = warm > 0 ? (warm--, 14) : 4; for (let s = 0; s < n; s++) step(); render(); }
-            requestAnimationFrame(frame);
-        }
-
-        readColors();
-        init();
-        new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(box);
-        matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { readColors(); render(); });
-        let rt;
-        window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { init(); if (reduced) settle(); }, 200); });
-        if (reduced) settle(); else requestAnimationFrame(frame);
-    })();
-    </script>
 </body>
 </html>
