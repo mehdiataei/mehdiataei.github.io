@@ -297,10 +297,12 @@
     },
     {
       "title": "Tunable Kinematic Smoothness for Generative Mechanism Synthesis",
-      "venue": "Under review",
+      "venue": "IDETC/CIE",
       "year": 2026,
       "authors": ["D. Bolanos", "M. Ataei", "K. Goucher-Lambert"],
-      "type": "preprint"
+      "type": "conference",
+      "link": "https://codesign.berkeley.edu/pdfs/papers/bolanos-kinematics-idetc.pdf",
+      "image": "public/figures/kinematic-smoothness.webp"
     },
     {
       "title": "Deep Generative Model for Mechanical System Configuration Design",
