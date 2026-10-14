@@ -24,11 +24,12 @@
         {
           "title": "Course Director",
           "start": "Jan 2023",
-          "end": "Present",
+          "end": "Aug 2026",
           "location": "Toronto, Ontario, Canada | On-site",
           "description": "Machine Learning"
         }
-      ]
+      ],
+      "category": "teaching"
     },
     {
       "company": "Autodesk",
@@ -58,7 +59,8 @@
           "location": "Toronto, Ontario, Canada",
           "description": "MECH 4403/EECS 1021 Artificial Intelligence and Generative Design for Mechanical Systems"
         }
-      ]
+      ],
+      "category": "teaching"
     }
   ],
   "datasets": [
@@ -123,59 +125,102 @@
   ],
   "patents": [
     {
+      "title": "Enhancing physical reasoning in vision-language models using specialized context builder modules",
+      "inventors": ["M. Ataei", "V. Balazadeh", "H. Cheong", "A. Khasahmadi"],
+      "number": "US Patent App. 19/402,730",
+      "image": "public/figures/patent-US20260148532A1.webp",
+      "link": "https://patents.google.com/patent/US20260148532A1/en"
+    },
+    {
+      "title": "Multi-region constraint enforcement in deep neural networks",
+      "inventors": ["M. Ataei", "H. Cheong", "A. Butscher"],
+      "number": "US Patent App. 19/427,627",
+      "image": "public/figures/patent-US20260228527A1.webp",
+      "link": "https://patents.google.com/patent/US20260228527A1/en"
+    },
+    {
+      "title": "Training design generative models using simulation",
+      "inventors": ["H. Cheong", "M. Ataei", "A. Khasahmadi", "P. Jayaraman"],
+      "number": "US Patent App. 19/450,600",
+      "image": "public/figures/patent-US20260228628A1.webp",
+      "link": "https://patents.google.com/patent/US20260228628A1/en"
+    },
+    {
+      "title": "Pareto front generation using design generative models",
+      "inventors": ["H. Cheong", "M. Ataei", "A. Khasahmadi", "P. Jayaraman"],
+      "number": "US Patent App. 19/441,667",
+      "image": "public/figures/patent-US20260228396A1.webp",
+      "link": "https://patents.google.com/patent/US20260228396A1/en"
+    },
+    {
       "title": "Iterative design of machine assemblies using machine learning models",
       "inventors": ["M. Ataei", "J.F. Matejka", "G.W. Fitzmaurice", "H. Cheong", "A. Tessier"],
-      "number": "US Patent App. 19/255,671"
+      "number": "US Patent App. 19/255,671",
+      "image": "public/figures/patent-US20260119753A1.webp",
+      "link": "https://patents.google.com/patent/US20260119753A1/en"
     },
     {
       "title": "Generating information in real-time during modifications to rendered product assemblies",
       "inventors": ["M. Ataei", "H. Cheong", "J.F. Matejka", "G.W. Fitzmaurice", "A. Tessier"],
-      "number": "US Patent App. 19/274,294"
+      "number": "US Patent App. 19/274,294",
+      "image": "public/figures/patent-US20260118856A1.webp",
+      "link": "https://patents.google.com/patent/US20260118856A1/en"
     },
     {
       "title": "Techniques for implementing an auto-completion system for mechanical assembly designs",
       "inventors": ["M. Ataei", "H. Cheong", "J.F. Matejka", "G.W. Fitzmaurice", "A. Tessier"],
-      "number": "US Patent App. 19/224,542"
+      "number": "US Patent App. 19/224,542",
+      "image": "public/figures/patent-US20260119727A1.webp",
+      "link": "https://patents.google.com/patent/US20260119727A1/en"
     },
     {
       "title": "Visualization of assembly designs generated using machine learning models",
       "inventors": ["M. Ataei", "H. Cheong", "J.F. Matejka", "G.W. Fitzmaurice", "A. Tessier"],
-      "number": "US Patent App. 19/255,668"
+      "number": "US Patent App. 19/255,668",
+      "image": "public/figures/patent-US20260119752A1.webp",
+      "link": "https://patents.google.com/patent/US20260119752A1/en"
     },
     {
       "title": "Training transformer models to generate mechanical assemblies",
       "inventors": ["H. Cheong", "M. Ataei", "P. Jayaraman", "Y. Etesam"],
-      "number": "US Patent App. 19/262,805"
-    },
-    {
-      "title": "Training transformer models to generate mechanical assemblies",
-      "inventors": ["H. Cheong", "M. Ataei", "P. Jayaraman", "Y. Etesam"],
-      "number": "US Patent App. 19/262,792"
+      "number": "US Patent Apps. 19/262,805 and 19/262,792",
+      "image": "public/figures/patent-US20260057240A1.webp",
+      "link": "https://patents.google.com/patent/US20260057240A1/en"
     },
     {
       "title": "Generating mechanical assemblies using hybrid search algorithms and transformer models",
       "inventors": ["H. Cheong", "Y. Etesam", "M. Ataei", "P. Jayaraman"],
-      "number": "US Patent App. 19/264,442"
+      "number": "US Patent App. 19/264,442",
+      "image": "public/figures/patent-US20260057133A1.webp",
+      "link": "https://patents.google.com/patent/US20260057133A1/en"
     },
     {
       "title": "Techniques for enabling conversational user interfaces for simulation applications via language models",
       "inventors": ["M. Ataei", "H. Salehipour", "A. Tessier"],
-      "number": "US Patent App. 18/750,783"
+      "number": "US Patent App. 18/750,783",
+      "image": "public/figures/patent-US20250028881A1.webp",
+      "link": "https://patents.google.com/patent/US20250028881A1/en"
     },
     {
       "title": "Machine learning approach to piecewise linear interface construction",
-      "inventors": [ "M. Ataei", "M. Bussmann"],
-      "number": "US Patent 11,250,186"
+      "inventors": ["M. Ataei", "M. Bussmann"],
+      "number": "US Patents 11,250,186 and 12,547,798",
+      "image": "public/figures/patent-US11250186B2.webp",
+      "link": "https://patents.google.com/patent/US11250186B2/en"
     },
     {
       "title": "Memory-efficient encoding and decoding of boundary conditions in the lattice Boltzmann method",
       "inventors": ["M. Ataei", "M. Meneghin", "H. Salehipour"],
-      "number": "US Patent App. 19/040,731"
+      "number": "US Patent App. 19/040,731",
+      "image": "public/figures/patent-US20250265183A1.webp",
+      "link": "https://patents.google.com/patent/US20250265183A1/en"
     },
     {
       "title": "Large language model agent-based framework for design requirements elicitation",
       "inventors": ["M. Ataei", "H. Cheong", "D. Grandi", "Y. Wang", "N.J.W. Morris", "A. Tessier"],
-      "number": "US Patent App. 19/075,309"
+      "number": "US Patent App. 19/075,309",
+      "image": "public/figures/patent-US20250315214A1.webp",
+      "link": "https://patents.google.com/patent/US20250315214A1/en"
     }
   ],
   "publications": [
@@ -185,22 +230,40 @@
       "year": 2026,
       "authors": ["M. Ataei", "M. A. Nabian", "J. Xu", "M. Macklin", "Y. Narang", "E. Heiden", "O. Zhang", "et al."],
       "link": "https://arxiv.org/abs/2610.09130",
-      "type": "preprint"
+      "type": "preprint",
+      "image": "public/figures/flashnerd.webp"
     },
     {
       "title": "Generative Artificial Intelligence for Classification, Prediction, and Discovery of Consumer Product Recalls",
       "venue": "ASME Journal of Computing and Information Science in Engineering",
       "year": 2026,
       "authors": ["D. Bolanos", "M. Ataei", "D. Grandi", "K. Goucher-Lambert"],
-      "type": "journal"
+      "type": "journal",
+      "image": "public/figures/consumer-recalls.webp",
+      "link": "https://codesign.berkeley.edu/pdfs/papers/bolanos-recalls-jcise.pdf"
     },
     {
       "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
-      "venue": "arXiv preprint",
+      "venue": "Transactions on Machine Learning Research (TMLR)",
       "year": 2026,
       "authors": ["M. Ataei", "F. Askari", "K. R. Malekshan", "P. Jayaraman"],
-      "link": "https://arxiv.org/abs/2604.24479",
-      "type": "preprint"
+      "link": "https://openreview.net/forum?id=QiKZ2TPGL0",
+      "type": "journal",
+      "image": "public/figures/zero-to-cad.webp",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.24479"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/collections/ADSKAILab/zero-to-cad"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B"
+        }
+      ]
     },
     {
       "title": "Physics Context Builders: A Modular Framework for Physical Reasoning in Vision-Language Models",
@@ -209,7 +272,8 @@
       "authors": ["V. Balazadeh", "M. Ataei", "H. Cheong", "A. Khasahmadi"],
       "role": "project lead, intern manager",
       "link": "https://arxiv.org/abs/2412.08619",
-      "type": "conference"
+      "type": "conference",
+      "image": "public/figures/physics-context-builders.webp"
     },
     {
       "title": "MechaFormer: Sequence Learning for Kinematic Mechanism Design Automation",
@@ -218,22 +282,57 @@
       "authors": ["D. Bolanos", "M. Ataei", "P. Jayaraman"],
       "role": "project lead, intern manager",
       "link": "https://ojs.aaai.org/index.php/AAAI/article/view/39059",
-      "type": "conference"
+      "type": "conference",
+      "image": "public/figures/mechaformer.webp",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2508.09005"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/dianabolanos/mechaformer"
+        }
+      ]
+    },
+    {
+      "title": "Tunable Kinematic Smoothness for Generative Mechanism Synthesis",
+      "venue": "Under review",
+      "year": 2026,
+      "authors": ["D. Bolanos", "M. Ataei", "K. Goucher-Lambert"],
+      "type": "preprint"
     },
     {
       "title": "Deep Generative Model for Mechanical System Configuration Design",
       "venue": "AAAI Conference",
       "year": 2025,
       "authors": ["Y. Etesam", "H. Cheong", "M. Ataei", "P. Jayaraman"],
-      "link": "https://gearformer.github.io/",
-      "type": "conference"
+      "link": "https://arxiv.org/abs/2409.06016",
+      "type": "conference",
+      "image": "public/figures/gearformer.webp",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://gearformer.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/GearFormer/GearFormer"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://github.com/GearFormer/GearFormer/tree/main/dataset"
+        }
+      ]
     },
     {
       "title": "Sampling Strategies for Transformer-Based Mechanism Synthesis",
       "venue": "NeurIPS, Frontiers in Probabilistic Inference",
       "year": 2025,
       "authors": ["M. Ataei", "D. Bolanos", "P. Jayaraman"],
-      "type": "workshop"
+      "type": "workshop",
+      "image": "public/figures/sampling-strategies.webp",
+      "link": "https://openreview.net/forum?id=L8irr5Hqwm"
     },
     {
       "title": "e-SimFT: Pareto-Optimal Sampling of Generative Design Models Fine-tuned with Simulation Feedback",
@@ -241,7 +340,8 @@
       "year": 2025,
       "authors": ["H. Cheong", "M. Ataei", "A. Khasahmadi", "P. Jayaraman"],
       "link": "https://arxiv.org/abs/2502.02628",
-      "type": "workshop"
+      "type": "workshop",
+      "image": "public/figures/e-simft.webp"
     },
     {
       "title": "mPOLICE: Provable Enforcement of Multi-Region Affine Constraints in Deep Neural Networks",
@@ -249,7 +349,8 @@
       "year": 2025,
       "authors": ["M. Ataei", "H. Cheong", "A. Butscher"],
       "link": "https://arxiv.org/abs/2502.02434",
-      "type": "preprint"
+      "type": "preprint",
+      "image": "public/figures/mpolice.webp"
     },
     {
       "title": "Transformer-Based Interfaces for Mechanical Assembly Design: A Gear Train Case Study",
@@ -257,15 +358,27 @@
       "year": 2025,
       "authors": ["M. Ataei", "H. Cheong", "J. Jun", "J. Matejka", "A. Tessier", "G. Fitzmaurice"],
       "link": "https://arxiv.org/abs/2504.08633",
-      "type": "preprint"
+      "type": "preprint",
+      "image": "public/figures/transformer-interfaces.webp"
     },
     {
       "title": "DesignQA: A Multimodal Benchmark for Evaluating Large Language Models' Understanding of Engineering Documentation",
       "venue": "ASME Journal of Computing and Information Science in Engineering",
       "year": 2025,
       "authors": ["A. C. Doris", "D. Grandi", "R. Tomich", "M. F. Alam", "H. Cheong", "M. Ataei", "F. Ahmed"],
-      "link": "https://design-qa.github.io/",
-      "type": "journal"
+      "link": "https://arxiv.org/abs/2404.07917",
+      "type": "journal",
+      "image": "public/figures/designqa.webp",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://design-qa.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/anniedoris/design_qa"
+        }
+      ]
     },
     {
       "title": "Elicitron: An LLM Agent-Based Simulation Framework for Design Requirements",
@@ -273,7 +386,8 @@
       "year": 2025,
       "authors": ["M. Ataei", "H. Cheong", "D. Grandi", "Y. Wang", "N. Morris", "A. Tessier"],
       "link": "https://arxiv.org/abs/2404.16045",
-      "type": "journal"
+      "type": "journal",
+      "image": "public/figures/elicitron.webp"
     },
     {
       "title": "RECALL-MM: A Multimodal Dataset of Consumer Product Recalls for Risk Analysis using Computational Methods and Large Language Models",
@@ -281,7 +395,14 @@
       "year": 2025,
       "authors": ["D. Bolanos", "M. Ataei", "D. Grandi", "K. Goucher-Lambert"],
       "link": "https://arxiv.org/abs/2503.23213",
-      "type": "conference"
+      "type": "conference",
+      "image": "public/figures/recall-mm.webp",
+      "links": [
+        {
+          "label": "Dataset",
+          "url": "https://github.com/dianabolanos/RECALL-MM"
+        }
+      ]
     },
     {
       "title": "Accelerating Scientific Research Through a Multi-LLM Framework",
@@ -289,7 +410,8 @@
       "year": 2025,
       "authors": ["J. Ramirez-Medina", "M. Ataei", "A. Amirfazli"],
       "link": "https://arxiv.org/abs/2502.07960",
-      "type": "preprint"
+      "type": "preprint",
+      "image": "public/figures/multi-llm.webp"
     },
     {
       "title": "Reduced-Order Modeling of Unsteady Fluid Flow Using Neural Network Ensembles",
@@ -297,7 +419,8 @@
       "year": 2024,
       "authors": ["R. Halder", "M. Ataei", "H. Salehipour", "K. Fidkowski"],
       "link": "https://arxiv.org/abs/2402.05372",
-      "type": "journal"
+      "type": "journal",
+      "image": "public/figures/rom-ensembles.webp"
     },
     {
       "title": "XLB: A Differentiable Massively Parallel Lattice Boltzmann Library in Python",
@@ -305,7 +428,18 @@
       "year": 2024,
       "authors": ["M. Ataei", "H. Salehipour"],
       "link": "https://doi.org/10.1016/j.cpc.2024.109187",
-      "type": "journal"
+      "type": "journal",
+      "image": "public/figures/xlb.webp",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2311.16080"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Autodesk/XLB"
+        }
+      ]
     },
     {
       "title": "A Scalable Differentiable Physics Solver Based on the Lattice Boltzmann Method",
@@ -313,7 +447,9 @@
       "year": 2023,
       "authors": ["M. Ataei"],
       "link": "https://www.nvidia.com/en-us/on-demand/session/gtcspring23-s51956/",
-      "type": "conference"
+      "type": "conference",
+      "image": "public/figures/xlb-gtc.webp",
+      "linkLabel": "Talk"
     },
     {
       "title": "Data Shift in Machine Learning and Potential Remedies",
@@ -321,7 +457,8 @@
       "year": 2021,
       "authors": ["A. Pesaranghader", "M. Ataei", "S. Kocak"],
       "link": "https://ecmlpkdd.org/2021/",
-      "type": "tutorial"
+      "type": "tutorial",
+      "linkLabel": "Conference"
     },
     {
       "title": "NPLIC: A Machine Learning Approach to Piecewise Linear Interface Construction",
@@ -329,7 +466,14 @@
       "year": 2021,
       "authors": ["M. Ataei", "M. Bussmann", "V. Shaayegan", "F. Costa", "S. Han", "C.B. Park"],
       "link": "https://www.sciencedirect.com/science/article/abs/pii/S0045793021001171",
-      "type": "journal"
+      "type": "journal",
+      "image": "public/figures/nplic.webp",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2007.04244"
+        }
+      ]
     },
     {
       "title": "A Deep Learning Algorithm for Piecewise Linear Interface Construction Problem",
@@ -337,7 +481,8 @@
       "year": 2021,
       "authors": ["M. Ataei", "M. Bussmann", "E. Pirmorad", "F. Costa", "S. Han", "C.B. Park"],
       "link": "https://arxiv.org/abs/2107.13067",
-      "type": "workshop"
+      "type": "workshop",
+      "image": "public/figures/dl-plic.webp"
     },
     {
       "title": "LBfoam: An Open-Source Software Package for the Simulation of Foaming Using the Lattice Boltzmann Method",
@@ -345,7 +490,63 @@
       "year": 2020,
       "authors": ["M. Ataei", "V. Shaayegan", "F. Costa", "S. Han", "C.B. Park", "M. Bussmann"],
       "link": "https://www.sciencedirect.com/science/article/abs/pii/S001046552030343X",
-      "type": "journal"
+      "type": "journal",
+      "image": "public/figures/lbfoam.webp",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1908.04262"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/mehdiataei/LBfoam"
+        }
+      ]
+    },
+    {
+      "title": "Numerical Analysis of the Effect of the Local Variation of Viscosity on Bubble Growth and Deformation in Polymer Foaming",
+      "venue": "Journal of Rheology",
+      "year": 2019,
+      "authors": ["M. Ataei", "V. Shaayegan", "C. Wang", "F. Costa", "S. Han", "C.B. Park", "M. Bussmann"],
+      "link": "https://doi.org/10.1122/1.5113802",
+      "type": "journal",
+      "image": "public/figures/viscosity-bubble-growth.webp"
+    },
+    {
+      "title": "Accurate Theoretical Modeling of Cell Growth by Comparing with Visualized Data in High-Pressure Foam Injection Molding",
+      "venue": "European Polymer Journal",
+      "year": 2019,
+      "authors": ["C. Wang", "V. Shaayegan", "M. Ataei", "F. Costa", "S. Han", "M. Bussmann", "C.B. Park"],
+      "link": "https://doi.org/10.1016/j.eurpolymj.2019.07.023",
+      "type": "journal",
+      "image": "public/figures/foam-injection-cell-growth.webp"
+    },
+    {
+      "title": "Behavior of a Liquid Bridge between Nonparallel Hydrophobic Surfaces",
+      "venue": "Langmuir",
+      "year": 2017,
+      "authors": ["M. Ataei", "H. Chen", "A. Amirfazli"],
+      "link": "https://doi.org/10.1021/acs.langmuir.7b03508",
+      "type": "journal",
+      "image": "public/figures/liquid-bridge-hydrophobic.webp"
+    },
+    {
+      "title": "Stability of a Liquid Bridge between Nonparallel Hydrophilic Surfaces",
+      "venue": "Journal of Colloid and Interface Science",
+      "year": 2017,
+      "authors": ["M. Ataei", "H. Chen", "T. Tang", "A. Amirfazli"],
+      "link": "https://doi.org/10.1016/j.jcis.2016.11.092",
+      "type": "journal",
+      "image": "public/figures/liquid-bridge-stability.webp"
+    },
+    {
+      "title": "Motion of a Liquid Bridge between Nonparallel Surfaces",
+      "venue": "Journal of Colloid and Interface Science",
+      "year": 2017,
+      "authors": ["M. Ataei", "T. Tang", "A. Amirfazli"],
+      "link": "https://doi.org/10.1016/j.jcis.2016.11.093",
+      "type": "journal",
+      "image": "public/figures/liquid-bridge-motion.webp"
     }
   ]
 }
