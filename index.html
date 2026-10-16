@@ -180,15 +180,20 @@
             .row { grid-template-columns: 1fr; }
             .main { grid-column: 1; }
             .topnav .row { padding-top: 14px; }
-            .masthead { padding-top: 28px; }
-            .portrait { margin-bottom: 18px; }
-            .portrait img { width: 96px; height: 96px; }
+            .nav { justify-content: center; }
+            .masthead { padding-top: 32px; text-align: center; }
+            .portrait { width: auto; justify-content: center; margin-bottom: 16px; }
+            .portrait img { width: 112px; height: 112px; }
+            .title-row { flex-direction: column; gap: 10px; }
+            .role { margin-top: 10px; }
+            .masthead-line { justify-content: center; gap: 2px 14px; }
+            .masthead-line li + li::before { content: none; }
             .tl-item { grid-template-columns: 48px 1fr; column-gap: 14px; }
             .tl-item .main { grid-column: 2; }
             .logo { width: 48px; height: 48px; padding: 8px; }
             .tl-top { flex-direction: column; gap: 0; }
             .year span { grid-column: 1; }
-            .entry .figure { max-width: 420px; margin-bottom: 12px; aspect-ratio: 16 / 10; }
+            .entry .figure { margin-bottom: 12px; aspect-ratio: 16 / 10; }
             .table tr { display: block; border-top: 1px solid var(--rule); padding: 12px 0; }
             .table tr:first-child { border-top: none; padding-top: 0; }
             .table td { display: block; border: 0; padding: 0; width: auto !important; }
