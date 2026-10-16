@@ -50,8 +50,9 @@
         em.s, .serif-i { font-family: var(--serif); font-style: italic; font-size: 1.12em; letter-spacing: .005em; }
 
         /* Page frame: a reading column with a left rail for figures and logos */
-        .page { width: calc(var(--rail) + var(--gap) + var(--column) + 40px); max-width: 100%; margin: 0 auto; padding: 0 20px 96px; }
-        .row { display: grid; grid-template-columns: var(--rail) minmax(0, var(--column)); column-gap: var(--gap); }
+        .page { width: calc(2 * var(--rail) + 2 * var(--gap) + var(--column) + 40px); max-width: 100%; margin: 0 auto; padding: 0 20px 96px; }
+        /* The reading column is centred; the left rail holds figures and logos, a matching empty rail on the right balances it */
+        .row { display: grid; grid-template-columns: var(--rail) minmax(0, var(--column)) var(--rail); column-gap: var(--gap); }
         .main { grid-column: 2; }
 
         /* ===== Nav ===== */
@@ -59,7 +60,8 @@
             position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--ground) 92%, transparent);
             backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
         }
-        .topnav .row { padding: 22px 0 12px; border-bottom: 1px solid var(--rule); }
+        .topnav .row { padding: 22px 0 0; }
+        .topnav .main { padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
         .nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; padding: 0; list-style: none; }
         .nav a { color: var(--muted); text-decoration: none; transition: color .3s ease; }
         .nav a:hover, .nav a.active { color: var(--ink); }
@@ -177,6 +179,10 @@
         .lightbox figcaption { margin-top: 10px; color: #525252; font-size: 13px; text-align: center; }
         .lightbox .close { position: absolute; top: -12px; right: -12px; width: 28px; height: 28px; border-radius: 50%; border: 0; background: #ededed; color: #171717; font-size: 15px; cursor: pointer; }
 
+        @media (max-width: 1080px) {
+            .page { width: calc(var(--rail) + var(--gap) + var(--column) + 40px); }
+            .row { grid-template-columns: var(--rail) minmax(0, var(--column)); }
+        }
         @media (max-width: 820px) {
             .row { grid-template-columns: 1fr; }
             .main { grid-column: 1; }
