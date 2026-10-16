@@ -99,8 +99,8 @@
 
         /* ===== Timeline (experience / teaching) ===== */
         .tl { list-style: none; margin: 0; padding: 0; }
-        .tl-item { padding: 14px 0; border-top: 1px solid var(--rule); align-items: center; }
-        .tl-item:first-child { border-top: none; padding-top: 0; }
+        .tl-item { padding: 14px 0; align-items: center; position: relative; }
+        .tl-item:first-child { padding-top: 0; }
         .logo { width: 96px; height: 72px; display: flex; align-items: center; justify-content: center; justify-self: end; }
         .logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
         .tl-top { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
@@ -124,8 +124,13 @@
         .year:first-child { margin-top: 0; }
         .year span { grid-column: 2; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--muted); font-variant-numeric: lining-nums; }
         .entries { list-style: none; margin: 0; padding: 0; }
-        .entry { padding: 16px 0; border-top: 1px solid var(--rule); }
-        .entries .entry:first-child { border-top: none; padding-top: 4px; }
+        .entry { padding: 16px 0; position: relative; }
+        .entries .entry:first-child { padding-top: 4px; }
+        /* Dividers between items span only the reading column, matching the section-head rules */
+        .tl-item + .tl-item::before, .entry + .entry::before {
+            content: ''; position: absolute; top: 0; height: 1px; background: var(--rule);
+            left: calc(var(--rail) + var(--gap)); width: min(var(--column), calc(100% - var(--rail) - var(--gap)));
+        }
         .figure {
             display: block; width: 100%; aspect-ratio: 4 / 3; padding: 0; border: 0; border-radius: 10px;
             background: #fff; box-shadow: var(--card-shadow); overflow: hidden; cursor: zoom-in;
@@ -196,6 +201,7 @@
             .masthead-line { justify-content: center; gap: 2px 14px; }
             .masthead-line li + li::before { content: none; }
             .tl-item { grid-template-columns: 64px 1fr; column-gap: 14px; }
+            .tl-item + .tl-item::before, .entry + .entry::before { left: 0; width: 100%; }
             .tl-item .main { grid-column: 2; }
             .logo { width: 64px; height: 56px; }
             .tl-top { flex-direction: column; gap: 0; }
